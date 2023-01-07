@@ -23,11 +23,12 @@ export default function Home() {
       <div className="mb-10"></div>
       <Hero />
       <div className="mb-10"></div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full h-full">
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full h-full">
      {projects.map((project) => (
         <Project key={project.id} project={project} />
       ))}
      </div>
+     <div className="mb-10"></div>
      <Footer />
     </Container>
 
