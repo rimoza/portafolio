@@ -3,8 +3,8 @@
  */
 module.exports = {
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [],
   theme: {},
