@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Project from './index';
-import { IProjects } from '../../pages/types';
+import { IProjects } from '../../types';
 
 const ProjectList = ({ projects }: { projects: IProjects[]}) => {
   return (

@@ -16,7 +16,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mb-10"></div>
       <Hero />
       <Container>
         <div className="my-10 mx-10 md:mx-0">

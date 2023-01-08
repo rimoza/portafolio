@@ -4,8 +4,9 @@ import Container from "../Container/Container";
 
 const Hero = () => {
   return (
-    <>
-        <div className="flex flex-col md:flex-row justify-center items-center bg-gray-100 p-10 rounded-md">
+    <div className="bg-gray-100">
+        <Container>
+        <div className="flex flex-col md:flex-row justify-center items-center py-16 rounded-md">
         <div>
           <div>
             <h2 className="text-2xl">
@@ -21,7 +22,7 @@ const Hero = () => {
               necessitatibus! Perferendis!
             </p>
           </div>
-          <div>
+          <div className="bg-blue-800 my-3 w-48 py-3 text-center text-white text-xl font-bold rounded-md drop-shadow-md border border-blue-800 hover:bg-white hover:text-blue-800">
             <button>Connect with me</button>
           </div>
         </div>
@@ -34,7 +35,8 @@ const Hero = () => {
           />
         </div>
         </div>
-    </>
+        </Container>
+    </div>
   );
 };
 

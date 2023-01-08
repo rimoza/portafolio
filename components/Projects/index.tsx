@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classes from './Projects.module.css';
-import { IProjects } from "../../pages/types";
+import { IProjects } from "../../types";
 
 const Project = ({ project }: { project: IProjects}) => {
   return (
