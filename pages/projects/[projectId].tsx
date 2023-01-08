@@ -42,7 +42,10 @@ const ProjectDetails = () => {
         <h1 className="mt-6 text-xl font-bold text-gray-800 dark:text-white lg:text-4xl">
           {project.name}
         </h1>
-        <button className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-center text-sm font-medium capitalize leading-5 text-white hover:bg-blue-500 focus:outline-none lg:mx-0 lg:w-auto">
+        <button
+         className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-center text-sm font-medium capitalize leading-5 text-white hover:bg-blue-500 focus:outline-none lg:mx-0 lg:w-auto"
+         onClick={() => router.push('/')}
+         >
           Go Home
         </button>
       </div>

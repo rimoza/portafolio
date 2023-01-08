@@ -4,7 +4,7 @@ import Container from "../Container/Container";
 
 const Hero = () => {
   return (
-    <Container>
+    <>
         <div className="flex flex-col md:flex-row justify-center items-center bg-gray-100 p-10 rounded-md">
         <div>
           <div>
@@ -34,7 +34,7 @@ const Hero = () => {
           />
         </div>
         </div>
-    </Container>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import Container from "../components/Container/Container";
 // import { Inter } from "@next/font/google";
 
 import Hero from "../components/Hero";
-import Project from "../components/Projects";
+import ProjectList from "../components/Projects/ProjectList";
 import projects from "../dummyData";
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -24,14 +24,7 @@ export default function Home() {
           <h1 className="my-2 text-center text-4xl text-white font-semibold py-2 rounded-md bg-blue-500">Projects</h1>
           <hr />
         </div>
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full h-full"
-          id="projects"
-        >
-          {projects.map((project) => (
-            <Project key={project.id} project={project} />
-          ))}
-        </div>
+        <ProjectList projects = {projects} />
       </Container>
       <div className="mb-10"></div>
     </>

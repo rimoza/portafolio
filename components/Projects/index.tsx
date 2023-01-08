@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classes from './Projects.module.css';
+import { IProjects } from "../../pages/types";
 
-const Project = ({ project }: any) => {
-  console.log(project);
+const Project = ({ project }: { project: IProjects}) => {
   return (
      <div className="rounded-2xl overflow-hidden w-full drop-shadow-md cursor-pointer px-5 sm:px-2 md:px-1">
        <Link href={`/projects/${project.id}`} className='flex flex-wrap justify-center items-center hover:scale-105 transform transition ease-out duration-250'>
