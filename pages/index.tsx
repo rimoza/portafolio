@@ -19,7 +19,7 @@ export default function Home() {
       <div className="mb-10"></div>
       <Hero />
       <Container>
-        <div className="my-10">
+        <div className="my-10 mx-10 md:mx-0">
           <hr />
           <h1 className="my-2 text-center text-4xl text-white font-semibold py-2 rounded-md bg-blue-500">Projects</h1>
           <hr />

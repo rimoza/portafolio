@@ -5,9 +5,13 @@ import Navbar from "../Navbar";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
       <main>{children}</main>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

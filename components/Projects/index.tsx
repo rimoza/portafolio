@@ -17,7 +17,7 @@ const Project = ({ project }: { project: IProjects}) => {
           className={classes.projectImage}
         />
         <div className={classes.projectName}>
-          <p className="bg-black text-center mt-48 text-white max-w-full">{project.name}</p>
+          <p className="bg-blue-800 text-center mt-48 text-white max-w-full">{project.name}</p>
         </div>
         </p>
       </Link>
