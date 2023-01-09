@@ -8,7 +8,7 @@ import Image from "next/image";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className=" shadow-sm w-full z-10">
+    <nav className=" shadow-sm w-full z-10 bg-white">
       <div className="w-full">
         <div className="flex items-center h-20 w-full">
           <div className="flex items-center  mx-20  justify-between w-full">
