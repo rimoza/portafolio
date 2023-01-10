@@ -4,7 +4,7 @@ import { IProjects } from "../../types";
 import { useRouter } from "next/router";
 import classes from "./Projects.module.css";
 
-const Project = ({ project }: { project: IProjects }) => {
+const ProjectItem = ({ project }: { project: IProjects }) => {
   const router = useRouter();
 
   return (
@@ -25,4 +25,4 @@ const Project = ({ project }: { project: IProjects }) => {
   );
 };
 
-export default Project;
+export default ProjectItem;

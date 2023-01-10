@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import ProjectList from "../components/Projects/ProjectList";
 import SkillList from "../components/Skills";
 import { skills } from "../dummyData";
-import { projects } from "../dummyData";
+import { projects } from '../dummyData'
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
