@@ -6,7 +6,7 @@ import { IProjects } from '../../types';
 const ProjectList = ({ projects }: { projects: IProjects[]}) => {
   return (
     <div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full h-full"
+          className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-2 md:mx-0"
           id="projects"
         >
           {projects.length > 0 ? projects.map((project: IProjects) => (

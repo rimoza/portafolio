@@ -1,15 +1,8 @@
 .projectItem {
-  @apply w-[500px] h-[500px] overflow-hidden relative hover:opacity-75;
+  @apply transform hover:scale-[1.01] transition-all rounded-xl w-full bg-gradient-to-r p-1 from-[#D8B4FE] to-[#818CF8];
 }
 
-.projectImage {
-  transform: scale(1.1);
-}
 
-.projectImage {
-  @apply w-[100%] h-[100%] object-cover rounded-3xl cursor-pointer;
-}
-
-.projectName {
-  @apply absolute right-0 left-0 top-0 bottom-0 w-full h-full text-xl text-center font-bold opacity-0 hover:opacity-95;
+.projectTitle {
+  @apply flex flex-col justify-between gap-5 h-full bg-white rounded-lg p-4;
 }
