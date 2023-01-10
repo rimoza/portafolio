@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Container from "../../components/Container/Container";
-import projects from "../../dummyData";
+import { projects } from "../../dummyData";
 
 const ProjectDetails = () => {
   const router = useRouter();
