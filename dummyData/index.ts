@@ -1,4 +1,4 @@
-export  const projects = [
+export const projects = [
     {
       id: 'project-1',
       name: 'Project 1',
@@ -42,7 +42,6 @@ export  const projects = [
         image: '/images/box4.png'
       },
   ]
-
 
   export const skills = [
     { name: 'JavaScript', level: 4 },
