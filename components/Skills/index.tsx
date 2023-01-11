@@ -3,19 +3,17 @@ import React from "react";
 const SkillList = ({ skills }: any) => {
   return (
     <>
-      <div className="collapse">
+      <ul className="grid grid-cols-2 md:grid-cols-3 leading-7 text-md text-gray-500 font-semibold">
         {skills.map((skill: any) => (
           <div key={skill.name}>
-            <input type="checkbox" className="peer" />
-            <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <li className='flex flex-row'>
+              <span className="bg-gray-300 py-2 px-5 m-2 rounded-md drop-shadow-sm">
               {skill.name}
-            </div>
-            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-              <p>{skill.level}</p>
-            </div>
+              </span>
+            </li>
           </div>
         ))}
-      </div>
+      </ul>
     </>
   );
 };

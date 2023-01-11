@@ -2,10 +2,13 @@ import React from "react";
 import Link from "next/link";
 import { FiMenu } from 'react-icons/fi'
 
+import Container from '../Container/Container'
+
 function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
+    <Container>
     <nav className=" shadow-sm w-full z-10">
       <div className="navbar">
         <div className="flex-1">
@@ -34,6 +37,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    </Container>
   );
 }
 

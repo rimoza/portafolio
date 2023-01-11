@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import Container from "../Container/Container";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,7 +12,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
       <div>
         <Navbar />
       </div>
@@ -21,7 +19,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div>
         <Footer />
       </div>
-      </Container>
     </div>
   );
 };
