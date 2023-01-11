@@ -5,15 +5,15 @@ import Container from "../Container/Container";
 
 const AboutMe = () => {
   return (
-    <div className="my-48">
+    <div className="my-32">
       <Container>
-      <div>
-        <hr />
-        <h1 className="my-2 text-center text-4xl text-blue-500 font-semibold py-2 rounded-md">
-          ABOUT ME
-        </h1>
-        <hr />
-      </div>
+        <div>
+          <hr />
+          <h1 className="my-2 text-center text-4xl text-blue-500 font-semibold py-2 rounded-md">
+            ABOUT ME
+          </h1>
+          <hr />
+        </div>
         <div className="text-center">
           <div>
             <p className="text-center text-2xl text-gray-400 mt-5 mb-10">
@@ -25,7 +25,7 @@ const AboutMe = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-10 md:pt-10">
           <div className="max-w-md">
             <h2 className="text-3xl font-bold mb-4">Get to know me!</h2>
-            <div className="leading-7 text-md text-gray-500 font-semibold">
+            <div className="leading-7 text-[17px] text-gray-500">
               <p className="mb-5">
                 I&apos;m a <strong>Frontend Web Developer</strong> building the
                 Front-end of Websites and Web Applications that leads to the
@@ -39,12 +39,12 @@ const AboutMe = () => {
                 matches my skills and experience then don&apos;t hesitate to{" "}
                 <strong>contact</strong> me.
               </p>
-              <div className="pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start">
+              <div className="hidden md:inline-block mt-10">
                 <a
-                  href="#projects"
-                  className="px-7 py-3 w-full bg-primary text-white text-center rounded-md shadow-md block sm:w-auto"
+                  href="javascript:void(0)"
+                  className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
                 >
-                  PROJECTS
+                  Contact Me
                 </a>
               </div>
             </div>

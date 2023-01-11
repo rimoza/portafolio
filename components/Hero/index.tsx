@@ -3,6 +3,7 @@ import Container from '../Container/Container';
 
 const Hero = () => {
   return (
+    <div className='bg-base-100 pb-24 md:pb-48'>
     <Container>
       <section className="mt-24 mx-auto max-w-screen-xl pb-12 px-4 items-center lg:flex md:px-8 bg-black py-10">
       <div className="space-y-4 flex-1 sm:text-center lg:text-left">
@@ -31,6 +32,7 @@ const Hero = () => {
       </div>
     </section>
     </Container>
+    </div>
   );
 };
 

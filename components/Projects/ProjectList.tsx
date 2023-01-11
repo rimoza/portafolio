@@ -6,6 +6,7 @@ import Container from "../Container/Container";
 
 const ProjectList = ({ projects }: { projects: IProjects[] }) => {
   return (
+    <div className='bg-base-100 py-16'>
     <Container>
       <div className="my-10 mx-10 md:mx-0">
         <hr />
@@ -27,6 +28,7 @@ const ProjectList = ({ projects }: { projects: IProjects[] }) => {
         )}
       </div>
     </Container>
+    </div>
   );
 };
 

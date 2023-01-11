@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
