@@ -1,9 +1,10 @@
 import React from 'react';
 
-import Hero from "../components/Hero";
-import ProjectList from "../components/Projects/ProjectList";
-import AboutMe from "../components/About";
 import { projects } from '../dummyData';
+import Hero from "../components/Hero";
+import AboutMe from "../components/About";
+import Contact from '../components/Contact'
+import ProjectList from "../components/Projects/ProjectList";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <AboutMe />
       </section>
       <ProjectList projects={projects} />
+      <Contact />
     </>
   );
 }
