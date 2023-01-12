@@ -3,9 +3,9 @@ import Container from '../Container/Container';
 
 const Hero = () => {
   return (
-    <div className='bg-base-100 pb-24 md:pb-48'>
+    <div className='bg-base-100 mx-2 md:mx-0 md:pb-48'>
     <Container>
-      <section className="mt-24 mx-auto max-w-screen-xl pb-12 px-4 items-center lg:flex md:px-8 bg-black py-10">
+      <section className="mx-auto max-w-screen-xl pb-12 px-4 items-center lg:flex md:px-8 bg-black py-10">
       <div className="space-y-4 flex-1 sm:text-center lg:text-left">
         <h1 className="text-white font-bold text-4xl xl:text-5xl">
           HELLO THERE, I&apos;M 
@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start">
           <a
             href="#projects"
-            className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto"
+            className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300"
           >
             PROJECTS
           </a>

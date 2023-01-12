@@ -1,22 +1,17 @@
 import React from "react";
 import Skills from "../Skills";
+import Heading from "../UI/Heading";
 import { skills } from "../../dummyData";
 import Container from "../Container/Container";
 
 const AboutMe = () => {
   return (
-    <div className="my-32">
+    <div className="my-32 mx-5 md:mx-0">
       <Container>
-        <div>
-          <hr />
-          <h1 className="my-2 text-center text-4xl text-blue-500 font-semibold py-2 rounded-md">
-            ABOUT ME
-          </h1>
-          <hr />
-        </div>
+        <Heading>ABOUT ME</Heading>
         <div className="text-center">
           <div>
-            <p className="text-center text-2xl text-gray-400 mt-5 mb-10">
+            <p className="text-center text-xl md:text-2xl text-gray-400 mt-5 mb-10">
               Here you will find more information about me, what I do, and my
               current skills mostly in terms of programming and technology
             </p>
@@ -41,8 +36,8 @@ const AboutMe = () => {
               </p>
               <div className="hidden md:inline-block mt-10">
                 <a
-                  href="javascript:void(0)"
-                  className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
+                  href="#contact"
+                  className="py-3 px-4 text-white bg-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 >
                   Contact Me
                 </a>
