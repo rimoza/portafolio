@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 
+import Link from 'next/link';
+
 import Container from "../Container/Container";
 import avatar from '../../public/images/avatar.jpg';
 
@@ -19,7 +21,7 @@ function Navbar() {
       <Container>
         <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
+            <Link href="/home">
               <Image
                 src={avatar}
                 width={60}
@@ -27,7 +29,7 @@ function Navbar() {
                 alt="my avatar"
                 className='rounded-full'
               />
-            </a>
+            </Link>
             <div className="md:hidden">
               <button
                 className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
@@ -74,19 +76,19 @@ function Navbar() {
               {navigation.map((item, idx) => {
                 return (
                   <li key={idx} className="text-gray-600 hover:text-indigo-600">
-                    <a href={item.path}>{item.title}</a>
+                    <Link href={item.path}>{item.title}</Link>
                   </li>
                 );
               })}
             </ul>
           </div>
           <div className="hidden md:inline-block">
-            <a
+            <Link
               href="#contact"
               className="py-3 px-4 text-white bg-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
             >
              Contact Me
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

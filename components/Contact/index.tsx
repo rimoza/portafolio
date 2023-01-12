@@ -6,7 +6,7 @@ import Container from "../Container/Container";
 
 const Contact = () => {
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white py-10" id='#contact'>
       <Container>
         <Heading>Get In Tech</Heading>
         <div className="flex justify-center items-center space-x-10 mt-10">
