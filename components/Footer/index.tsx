@@ -54,21 +54,21 @@ function Footer() {
           </div>
           <div className="mt-6 sm:mt-0">
             <ul className="flex items-center space-x-4">
-              <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center">
+              <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <a href="https://www.linkedin.com/in/ridwan-mohamed-363477161/" target="_blank" rel="noreferrer">
-                  <BsLinkedin className="text-primary transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" />
+                  <BsLinkedin className="text-primary" />
                 </a>
               </li>
 
-              <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center">
+              <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <a href="https://twitter.com/rimoza_10" target="_blank" rel="noreferrer">
-                 <BsTwitter className="text-primary transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" />
+                 <BsTwitter className="text-primary" />
                 </a>
               </li>
 
-              <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center">
+              <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <a href="https://github.com/rimoza" target="_blank" rel="noreferrer">
-                  <BsGithub className="text-primary transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" />
+                  <BsGithub className="text-primary" />
                 </a>
               </li>
             </ul>
