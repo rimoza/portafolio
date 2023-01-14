@@ -14,6 +14,7 @@ const SkillList = ({ skills }: any) => {
           </div>
         ))}
       </ul>
+      {skills.length <= 0 && <p>No skills to show</p>}
     </>
   );
 };
