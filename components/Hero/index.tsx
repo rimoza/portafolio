@@ -13,14 +13,14 @@ const Hero = () => {
           </h1>
 
           <p className="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed">
-            A Frontend focused Web Developer building the Frontend of Websites
-            and Web Applications that leads to the success of the overall
-            product
+            I&apos;m a frontend web developer with a passion for crafting
+            beautiful, user-friendly digital experiences. Let&apos;s create
+            something amazing together!
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
               className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-              href="/get-started"
+              href="#projects"
             >
               PROJECTS
             </a>

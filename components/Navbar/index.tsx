@@ -85,7 +85,7 @@ function Navbar() {
           <div className="hidden md:inline-block">
             <Link
               href="#contact"
-              className="py-3 px-4 text-white bg-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              className="py-3 px-4 text-white border border-primary bg-primary hover:bg-white hover:text-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
             >
              Contact Me
             </Link>

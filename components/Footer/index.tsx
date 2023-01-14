@@ -5,6 +5,7 @@ import Container from "../Container/Container";
 import avatar from "../../public/images/avatar.jpg";
 
 function Footer() {
+  let date = new Date()
   const footerNavs = [
     {
       href: "/",
@@ -36,9 +37,9 @@ function Footer() {
             className="rounded-full"
           />
           <p className="leading-relaxed mt-2 text-[15px]">
-            A Frontend focused Web Developer building the Frontend of Websites
-            and Web Applications that leads to the success of the overall
-            product
+            I&apos;m a frontend web developer with a passion for crafting beautiful,
+            user-friendly digital experiences. Let&apos;s create something amazing
+            together!
           </p>
         </div>
         <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
@@ -50,24 +51,36 @@ function Footer() {
         </ul>
         <div className="mt-8 items-center justify-between sm:flex">
           <div className="mt-4 sm:mt-0">
-            &copy; 2022 Float UI All rights reserved.
+            &copy; {date.getFullYear()} Ridwan Mohamed All rights reserved.
           </div>
           <div className="mt-6 sm:mt-0">
             <ul className="flex items-center space-x-4">
               <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <a href="https://www.linkedin.com/in/ridwan-mohamed-363477161/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/ridwan-mohamed-363477161/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsLinkedin className="text-primary" />
                 </a>
               </li>
 
               <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <a href="https://twitter.com/rimoza_10" target="_blank" rel="noreferrer">
-                 <BsTwitter className="text-primary" />
+                <a
+                  href="https://twitter.com/rimoza_10"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsTwitter className="text-primary" />
                 </a>
               </li>
 
               <li className="w-10 h-10 bg-white drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <a href="https://github.com/rimoza" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/rimoza"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsGithub className="text-primary" />
                 </a>
               </li>
