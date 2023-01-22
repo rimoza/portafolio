@@ -2,7 +2,7 @@ export type IProjects = {
   websiteUrl: string;
   type: string;
   imageUrl: string;
-  _id: null | undefined;
+  _id: string;
   id: string;
   name: string;
   title: string;

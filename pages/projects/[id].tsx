@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import client from "../../api/sanityClient";
-import Container from "../../components/Container/Container";
+import { GetStaticProps, GetStaticPaths } from 'next';
+
 import { IProjects } from "../../types";
+import client from "../../api/sanityClient";
+import Contact from "../../components/Contact";
+import Container from "../../components/Container/Container";
 
 const ProjectDetails = ({ project }: { project: IProjects }) => {
   console.log('project url:', project.websiteUrl);
@@ -59,6 +62,9 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
             </a>
           )}
         </div>
+        <div className="mt-10">
+        <Contact />
+        </div>
       </Container>
     </div>
   );
@@ -66,7 +72,7 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
 
 export default ProjectDetails;
 
-export async function getStaticProps(context: any) {
+export const getStaticProps: GetStaticProps = async (context) =>  {
   const { params } = context;
   if (!params) return { props: {} };
 
@@ -86,13 +92,13 @@ export async function getStaticProps(context: any) {
   return { props: {} };
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const projects = await client.fetch(`*[_type == "projects"]`);
 
   if (!projects) return { paths: [], fallback: false };
 
   const paths =
-    projects.map((project: any) => ({
+    projects.map((project: IProjects) => ({
       params: {
         id: project._id.toString(),
       },
