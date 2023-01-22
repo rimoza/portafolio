@@ -1,5 +1,4 @@
 export type IProjects= {
-    slug: any;
     _id: null | undefined;
     id: string;
     name: string;
@@ -7,3 +6,9 @@ export type IProjects= {
     image: string;
     description: string
   };
+
+  export type ISkills = {
+    id?: string;
+    name: string;
+    title?: string;
+  }

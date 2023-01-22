@@ -26,7 +26,7 @@ const Hero = () => {
             </a>
 
             <a
-              className="block w-full rounded border border-gray-600 px-12 py-3 text-sm font-medium text-white bg-gray-600 hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto"
+              className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-primary hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto"
               href="#contact"
             >
               CONTACT ME
