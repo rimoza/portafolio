@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { createClient } from "next-sanity";
+import client from '../../api/sanityClient';
 
 import Container from "../../components/Container/Container";
 
@@ -54,18 +54,12 @@ const ProjectDetails = ({ project }: any) => {
 
 export default ProjectDetails;
 
-const client = createClient({
-  projectId: "8eio6dub",
-  dataset: "production",
-  apiVersion: "2022-03-25",
-  useCdn: false,
-});
+
 
 export async function getStaticProps(context: any) {
   const { params } = context;
   if (!params) return { props: {} };
 
-  const options = { id: params.id.toString() };
   const query = `*[_id == $itemId] { _id, title, name, image, description }`;
 
   try {
