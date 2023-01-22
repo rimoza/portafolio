@@ -1,6 +1,7 @@
 import React from "react";
+import { ISkills } from "../../types";
 
-const SkillList = ({ skills }: any) => {
+const SkillList = ({ skills }: {skills: ISkills[]}) => {
   return (
     <>
       <ul className="grid grid-cols-2 leading-7 text-md text-gray-500 font-semibold">

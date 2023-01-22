@@ -6,7 +6,6 @@ import { IProjects } from "../../types";
 import Container from "../Container/Container";
 
 const ProjectList = ({ projects }: { projects: IProjects[] }) => {
-  // console.log(projects);
 
   return (
     <div className="bg-base-100 py-16" id="projects">

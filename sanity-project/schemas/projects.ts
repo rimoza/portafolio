@@ -36,7 +36,7 @@ export default {
       },
     },
     {
-      name: 'WebsiteUrl',
+      name: 'websiteUrl',
       title: 'Website URL',
       type: 'url',
     },
