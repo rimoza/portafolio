@@ -16,10 +16,6 @@ function Footer() {
       name: "About",
     },
     {
-      href: "#contact",
-      name: "Contact",
-    },
-    {
       href: "#projects",
       name: "Projects",
     },

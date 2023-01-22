@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 import Skills from "../Skills";
 import Heading from "../UI/Heading";
-import { skills } from "../../dummyData";
+import { ISkills } from "../../types";
 import Container from "../Container/Container";
 
-const AboutMe = ({ skills }: any) => {
+const AboutMe = ({ skills }: { skills: ISkills[] }) => {
   return (
     <div className="my-32 mx-5 md:mx-5" id='about'>
       <Container>
@@ -26,20 +26,20 @@ const AboutMe = ({ skills }: any) => {
               <p className="mb-5">
                 I&apos;m a <strong>Frontend Web Developer</strong> building the
                 Front-end of Websites and Web Applications that leads to the
-                success of the overall product. Check out some of my work in the
+                success of the overall product. Check out some of my work in the {" "}
                 <strong>Projects </strong>
                 section.
               </p>
               <p>
                 I&apos;m open to <strong>Job</strong> opportunities where I can
                 contribute, learn and grow. If you have a good opportunity that
-                matches my skills and experience then don&apos;t hesitate to
+                matches my skills and experience then don&apos;t hesitate to {" "}
                 <strong>contact</strong> me.
               </p>
               <div className="hidden md:inline-block mt-10">
                 <Link
                   href="#contact"
-                  className="py-3 px-4 text-white bg-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                  className="py-2 px-4 text-white border border-primary uppercase bg-primary hover:bg-white hover:text-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 >
                   Contact Me
                 </Link>

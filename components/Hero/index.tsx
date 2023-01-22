@@ -3,7 +3,7 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 
 const Hero = () => {
   return (
-    <section className="bg-base-100 text-gray-700 relative">
+    <section className="bg-base-100 text-gray-700 relative dark:text-white">
       <SocialIcons />
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-3xl text-center md:-mt-48">

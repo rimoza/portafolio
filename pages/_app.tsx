@@ -7,8 +7,8 @@ const alegreya = Alegreya({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <main className={alegreya.className}>
+    <Layout className={alegreya.className}>
+      <main>
       <Component {...pageProps} />
       </main>
     </Layout>
