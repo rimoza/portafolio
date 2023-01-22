@@ -32,7 +32,7 @@ const ProjectDetails = ({ project }: any) => {
         <div className="mt-10 flex justify-center">
           <Image
             className="h-96 w-full rounded-xl object-cover lg:w-4/5"
-            src={project.image}
+            src={project.imageUrl}
             alt={project.name}
             width={500}
             height={500}
@@ -60,7 +60,7 @@ export async function getStaticProps(context: any) {
   const { params } = context;
   if (!params) return { props: {} };
 
-  const query = `*[_id == $itemId] { _id, title, name, image, description }`;
+  const query = `*[_id == $itemId] { _id, title, name, 'imageUrl': image.asset->url, description }`;
 
   try {
     const project = await client.fetch(query, { itemId: params.id });
