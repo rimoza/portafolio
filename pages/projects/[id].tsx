@@ -46,14 +46,14 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
         </h1>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <button
-            className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto cursor-pointer"
+            className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white uppercase hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto cursor-pointer"
             onClick={() => router.push("/")}
           >
-            Go Home
+            Back to Home
           </button>
           {project.type === "website" && (
             <a
-              className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-primary hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto cursor-pointer"
+              className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-primary uppercase hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto cursor-pointer"
               href={project.websiteUrl}
               target="_blank"
               rel="noreferrer"
