@@ -6,17 +6,19 @@ import classes from "./Projects.module.css";
 
 const ProjectItem = ({ project }: { project: IProjects }) => {
   const router = useRouter();
-
+  if(!project) {
+    return null;
+  };
   return (
     <Link
-      href={`/projects/${project.id}`}
+      href={`/projects/${project._id}`}
       className={classes.projectItem}
     >
       <div className={classes.projectTitle}>
         <span className="text-gray-500"> {project.title} </span>
         <button
           className="btn btn-primary"
-          onClick={() => router.push(`/projects/${project.id}`)}
+          onClick={() => router.push(`/projects/${project._id}`)}
         >
           See More
         </button>

@@ -7,7 +7,6 @@ import { skills } from "../../dummyData";
 import Container from "../Container/Container";
 
 const AboutMe = ({ skills }: any) => {
-  console.log(skills, 'skills')
   return (
     <div className="my-32 mx-5 md:mx-5" id='about'>
       <Container>

@@ -8,7 +8,7 @@ import Contact from '../components/Contact'
 import ProjectList from "../components/Projects/ProjectList";
 
 
-export default function Home({ skills }: any) {
+export default function Home({ skills, projects }: any) {
   return (
     <>
       <Hero />
@@ -31,10 +31,11 @@ const client = createClient({
 
 export async function getStaticProps() {
   const skills = await client.fetch(`*[_type == "skills"]`);
-
+  const projects = await client.fetch(`*[_type == "projects"]`);
   return {
     props: {
       skills,
+      projects
     },
   };
 }

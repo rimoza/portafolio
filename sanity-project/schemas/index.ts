@@ -1,2 +1,3 @@
-import skills from './skills'
-export const schemaTypes = [skills]
+import skills from './skills';
+import projects from './projects'
+export const schemaTypes = [skills, projects]
