@@ -4,8 +4,9 @@ import Hero from "../components/Hero";
 import AboutMe from "../components/About";
 import Contact from "../components/Contact";
 import ProjectList from "../components/Projects/ProjectList";
+import { ISkills, IProjects } from "../types";
 
-export default function Home({ skills, projects }: any) {
+export default function Home({ skills, projects }: { skills: ISkills, projects: IProjects[] }) {
   return (
     <>
       <Hero />
