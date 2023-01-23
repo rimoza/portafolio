@@ -4,25 +4,26 @@ import Link from 'next/link';
 import Skills from "../Skills";
 import Heading from "../UI/Heading";
 import { ISkills } from "../../types";
+import classes from './About.module.css';
 import Container from "../Container/Container";
 
 const AboutMe = ({ skills }: { skills: ISkills[] }) => {
   return (
-    <div className="my-32 mx-5 md:mx-5" id='about'>
+    <div className={classes.about_wrapper} id='about'>
       <Container>
         <Heading>ABOUT ME</Heading>
         <div className="text-center">
           <div>
-            <p className="text-center text-xl md:text-2xl text-gray-400 mt-5 mb-10">
+            <p className={classes.about_title}>
               Here you will find more information about me, what I do, and my
               current skills mostly in terms of programming and technology
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-10 md:pt-10">
+        <div className={classes.about_grid}>
           <div className="max-w-md">
-            <h2 className="text-3xl font-bold mb-4">Get to know me!</h2>
-            <div className="leading-7 text-[17px] text-gray-500">
+            <h2 className={classes.bottom_title}>Get to know me!</h2>
+            <div className={classes.left_text}>
               <p className="mb-5">
                 I&apos;m a <strong>Frontend Web Developer</strong> building the
                 Front-end of Websites and Web Applications that leads to the
@@ -39,7 +40,7 @@ const AboutMe = ({ skills }: { skills: ISkills[] }) => {
               <div className="hidden md:inline-block mt-10">
                 <Link
                   href="#contact"
-                  className="py-2 px-4 text-white border border-primary uppercase bg-primary hover:bg-white hover:text-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                  className=""
                 >
                   Contact Me
                 </Link>
@@ -47,7 +48,7 @@ const AboutMe = ({ skills }: { skills: ISkills[] }) => {
             </div>
           </div>
           <div>
-            <h1 className="text-3xl font-bold mb-4">My Skills</h1>
+            <h1 className={classes.bottom_title}>My Skills</h1>
             <Skills skills={skills} />
           </div>
         </div>
