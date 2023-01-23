@@ -6,6 +6,7 @@ import Heading from "../UI/Heading";
 import { ISkills } from "../../types";
 import classes from './About.module.css';
 import Container from "../Container/Container";
+import Button from "../UI/Button/Button";
 
 const AboutMe = ({ skills }: { skills: ISkills[] }) => {
   return (
@@ -42,7 +43,7 @@ const AboutMe = ({ skills }: { skills: ISkills[] }) => {
                   href="#contact"
                   className=""
                 >
-                  Contact Me
+                  <Button>Contact Me</Button>
                 </Link>
               </div>
             </div>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 import Container from "../Container/Container";
-import avatar from '../../public/images/avatar.jpg';
+import avatar from "../../public/images/avatar.jpg";
+import Button from "../UI/Button/Button";
 
 function Navbar() {
   const [state, setState] = useState(false);
@@ -25,7 +26,7 @@ function Navbar() {
                 width={60}
                 height={60}
                 alt="my avatar"
-                className='rounded-full'
+                className="rounded-full"
               />
             </Link>
             <div className="md:hidden">
@@ -73,7 +74,10 @@ function Navbar() {
             <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className="border border-primary rounded-md bg-primary text-white px-5 py-2 hover:bg-white  hover:text-blue-600 md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300">
+                  <li
+                    key={idx}
+                    className="border border-primary rounded-md bg-primary text-white px-5 py-2 hover:bg-white  hover:text-blue-600 md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300"
+                  >
                     <Link href={item.path}>{item.title}</Link>
                   </li>
                 );
@@ -81,11 +85,8 @@ function Navbar() {
             </ul>
           </div>
           <div className="hidden md:inline-block">
-            <Link
-              href="#contact"
-              className="py-2 px-4 text-white border border-primary uppercase bg-primary hover:bg-white hover:text-primary rounded-md shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-            >
-             Contact Me
+            <Link href="#contact">
+              <Button className="py-2 px-3 text-white bg-primary hover:bg-white hover:text-primary md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300">Contact me</Button>
             </Link>
           </div>
         </div>

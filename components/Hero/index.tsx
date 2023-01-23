@@ -1,5 +1,7 @@
+import Link from "next/link";
 import React from "react";
 import SocialIcons from "../SocialIcons/SocialIcons";
+import Button from "../UI/Button/Button";
 
 const Hero = () => {
   return (
@@ -18,19 +20,17 @@ const Hero = () => {
             something amazing together!
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+            <Link
               href="#projects"
             >
-              PROJECTS
-            </a>
+              <Button className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"> PROJECTS</Button>
+            </Link>
 
-            <a
-              className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-primary hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto"
+            <Link
               href="#contact"
             >
-              CONTACT ME
-            </a>
+              <Button className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-primary hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto">CONTACT ME</Button>
+            </Link>
           </div>
         </div>
       </div>
