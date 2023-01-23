@@ -1,0 +1,7 @@
+.list_items {
+    @apply flex flex-row;
+}
+
+.list_name {
+    @apply bg-gray-300 w-full max-w-md py-2 px-5 m-2 rounded-md drop-shadow-sm;
+}

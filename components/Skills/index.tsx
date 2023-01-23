@@ -1,17 +1,16 @@
 import React from "react";
-import { ISkills } from "../../types";
 
-const SkillList = ({ skills }: {skills: ISkills[]}) => {
+import { ISkills } from "../../types";
+import classes from "./Skills.module.css";
+import SkillsItem from "./SkillsItem/SkillsItem";
+
+const SkillList = ({ skills }: { skills: ISkills[] }) => {
   return (
     <>
-      <ul className="grid grid-cols-2 leading-7 text-md text-gray-500 font-semibold">
-        {skills.map((skill: any) => (
+      <ul className={classes.list}>
+        {skills.map((skill: ISkills) => (
           <div key={skill.name}>
-            <li className='flex flex-row'>
-              <span className="bg-gray-300 w-full max-w-md py-2 px-5 m-2 rounded-md drop-shadow-sm">
-              {skill.name}
-              </span>
-            </li>
+            <SkillsItem skill={skill} />
           </div>
         ))}
       </ul>
