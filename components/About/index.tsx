@@ -41,9 +41,8 @@ const AboutMe = ({ skills }: { skills: ISkills[] }) => {
               <div className="hidden md:inline-block mt-10">
                 <Link
                   href="#contact"
-                  className=""
                 >
-                  <Button>Contact Me</Button>
+                  <Button className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:text-primary bg-primary hover:bg-white focus:outline-none focus:ring active:bg-primary sm:w-auto">Contact Me</Button>
                 </Link>
               </div>
             </div>

@@ -1,0 +1,7 @@
+.wrapper {
+  @apply bg-base-100 py-16;
+}
+
+.grid_projects {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-10 mx-2 md:mx-0;
+}

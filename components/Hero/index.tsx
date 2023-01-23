@@ -6,7 +6,9 @@ import Button from "../UI/Button/Button";
 const Hero = () => {
   return (
     <section className="bg-base-100 text-gray-700 relative dark:text-white">
-      <SocialIcons />
+      <div className="absolute top-64 ml-3 hidden md:block bg-white drop-shadow-md p-5 rounded-md">
+      <SocialIcons className="text-5xl mb-3" />
+      </div>
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-3xl text-center md:-mt-48">
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">

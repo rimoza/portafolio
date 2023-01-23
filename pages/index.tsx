@@ -3,7 +3,7 @@ import client from "../api/sanityClient";
 import Hero from "../components/Hero";
 import AboutMe from "../components/About";
 import Contact from "../components/Contact";
-import ProjectList from "../components/Projects/ProjectList";
+import ProjectList from "../components/Projects/Projects/ProjectList";
 import { ISkills, IProjects } from "../types";
 
 export default function Home({ skills, projects }: { skills: ISkills[], projects: IProjects[] }) {
