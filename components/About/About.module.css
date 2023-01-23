@@ -10,6 +10,10 @@
   @apply grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-10 md:pt-10;
 }
 
+.btn {
+  @apply block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:text-primary bg-primary hover:bg-white focus:outline-none focus:ring active:bg-primary sm:w-auto;
+}
+
 .bottom_title {
   @apply text-3xl font-bold mb-4;
 }
@@ -17,4 +21,3 @@
 .left_text {
   @apply leading-7 text-[17px] text-gray-500;
 }
-

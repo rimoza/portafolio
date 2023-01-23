@@ -7,5 +7,5 @@
 }
 
 .btn_item {
-  @apply btn btn-primary hover:bg-white hover:text-primary  
+  @apply btn btn-primary hover:bg-white hover:text-primary;
 }

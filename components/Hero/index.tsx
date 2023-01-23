@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import classes from './Hero.module.css'
+import classes from "./Hero.module.css";
 import Button from "../UI/Button/Button";
 import SocialIcons from "../SocialIcons/SocialIcons";
 
@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className={classes.section}>
       <div className={classes.socialIcons_wrapper}>
-      <SocialIcons className="text-5xl mb-3" />
+        <SocialIcons className="text-5xl mb-3" />
       </div>
       <div className={classes.wrapper}>
         <div className={classes.bottom_section}>
@@ -24,16 +24,17 @@ const Hero = () => {
             something amazing together!
           </p>
           <div className={classes.btn_wrapper}>
-            <Link
-              href="#projects"
-            >
-              <Button className={`${classes.btn} ${classes.btn_project}`}> PROJECTS</Button>
+            <Link href="#projects">
+              <Button className={`${classes.btn} ${classes.btn_project}`}>
+                {" "}
+                PROJECTS
+              </Button>
             </Link>
 
-            <Link
-              href="#contact"
-            >
-              <Button className={`${classes.btn} ${classes.btn_contact}`}>CONTACT ME</Button>
+            <Link href="#contact">
+              <Button className={`${classes.btn} ${classes.btn_contact}`}>
+                CONTACT ME
+              </Button>
             </Link>
           </div>
         </div>

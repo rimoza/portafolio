@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 import Button from "../UI/Button/Button";
 import classes from "./Navbar.module.css";
@@ -68,7 +68,11 @@ function Navbar() {
             <ul className={classes.list}>
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className={`${classes.list_items}`} onClick={() => setState(!state)}>
+                  <li
+                    key={idx}
+                    className={`${classes.list_items}`}
+                    onClick={() => setState(!state)}
+                  >
                     <Link href={item.path}>{item.title}</Link>
                   </li>
                 );

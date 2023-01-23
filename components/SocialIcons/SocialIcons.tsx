@@ -1,9 +1,9 @@
 import React from "react";
 import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 
-import classes from './SocialIcons.module.css';
+import classes from "./SocialIcons.module.css";
 
-const SocialIcons = ({ className ='' }) => {
+const SocialIcons = ({ className = "" }) => {
   return (
     <>
       <a
@@ -17,7 +17,7 @@ const SocialIcons = ({ className ='' }) => {
         <BsTwitter className={`${classes.icons} ${className}`} />
       </a>
       <a href="https://github.com/rimoza" target="_blank" rel="noreferrer">
-        <BsGithub className={`${classes.icons} ${className}`}  />
+        <BsGithub className={`${classes.icons} ${className}`} />
       </a>
     </>
   );
