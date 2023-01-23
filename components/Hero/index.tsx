@@ -1,37 +1,39 @@
-import Link from "next/link";
 import React from "react";
-import SocialIcons from "../SocialIcons/SocialIcons";
+import Link from "next/link";
+
+import classes from './Hero.module.css'
 import Button from "../UI/Button/Button";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 const Hero = () => {
   return (
-    <section className="bg-base-100 text-gray-700 relative dark:text-white">
-      <div className="absolute top-64 ml-3 hidden md:block bg-white drop-shadow-md p-5 rounded-md">
+    <section className={classes.section}>
+      <div className={classes.socialIcons_wrapper}>
       <SocialIcons className="text-5xl mb-3" />
       </div>
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-        <div className="mx-auto max-w-3xl text-center md:-mt-48">
-          <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+      <div className={classes.wrapper}>
+        <div className={classes.bottom_section}>
+          <h1 className={classes.title}>
             HELLO THERE, I&apos;M
             <span className="sm:block"> RIDWAN MOHAMED </span>
           </h1>
 
-          <p className="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed">
+          <p className={classes.text}>
             I&apos;m a frontend web developer with a passion for crafting
             beautiful, user-friendly digital experiences. Let&apos;s create
             something amazing together!
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className={classes.btn_wrapper}>
             <Link
               href="#projects"
             >
-              <Button className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"> PROJECTS</Button>
+              <Button className={`${classes.btn} ${classes.btn_project}`}> PROJECTS</Button>
             </Link>
 
             <Link
               href="#contact"
             >
-              <Button className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-primary hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto">CONTACT ME</Button>
+              <Button className={`${classes.btn} ${classes.btn_contact}`}>CONTACT ME</Button>
             </Link>
           </div>
         </div>
