@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import Button from "../UI/Button/Button";
+import classes from "./Navbar.module.css";
 import Container from "../Container/Container";
 import avatar from "../../public/images/avatar.jpg";
-import Button from "../UI/Button/Button";
 
 function Navbar() {
   const [state, setState] = useState(false);
@@ -16,10 +17,10 @@ function Navbar() {
   ];
 
   return (
-    <nav className="w-full border-b md:border-0 md:static">
+    <nav className={classes.navbar}>
       <Container>
-        <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+        <div className={classes.wrapper}>
+          <div className={classes.logo}>
             <Link href="/">
               <Image
                 src={avatar}
@@ -30,10 +31,7 @@ function Navbar() {
               />
             </Link>
             <div className="md:hidden">
-              <button
-                className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
-                onClick={() => setState(!state)}
-              >
+              <Button className={classes.btn} onClick={() => setState(!state)}>
                 {state ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -63,21 +61,14 @@ function Navbar() {
                     />
                   </svg>
                 )}
-              </button>
+              </Button>
             </div>
           </div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              state ? "block" : "hidden"
-            }`}
-          >
-            <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+          <div className={`${classes.state} ${state ? "block" : "hidden"}`}>
+            <ul className={classes.list}>
               {navigation.map((item, idx) => {
                 return (
-                  <li
-                    key={idx}
-                    className="border border-primary rounded-md bg-primary text-white px-5 py-2 hover:bg-white  hover:text-blue-600 md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300"
-                  >
+                  <li key={idx} className={`${classes.list_items}`} onClick={() => setState(!state)}>
                     <Link href={item.path}>{item.title}</Link>
                   </li>
                 );
@@ -86,7 +77,7 @@ function Navbar() {
           </div>
           <div className="hidden md:inline-block">
             <Link href="#contact">
-              <Button className="py-2 px-3 text-white bg-primary hover:bg-white hover:text-primary md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300">Contact me</Button>
+              <Button className={classes.btn_link}>Contact me</Button>
             </Link>
           </div>
         </div>

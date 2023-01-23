@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
+
 import Container from "../Container/Container";
 import avatar from "../../public/images/avatar.jpg";
 import SocialIcons from "../SocialIcons/SocialIcons";
@@ -52,17 +52,10 @@ function Footer() {
           </div>
           <div className="mt-6 sm:mt-0">
             <div className="flex items-center space-x-4">
-                <SocialIcons className="text-2xl drop-shadow-sm rounded-full flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"/>
+                <SocialIcons className="text-2xl drop-shadow-sm flex justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"/>
             </div>
           </div>
         </div>
-        <style jsx>{`
-          .svg-icon path,
-          .svg-icon polygon,
-          .svg-icon rect {
-            fill: currentColor;
-          }
-        `}</style>
       </Container>
     </footer>
   );
