@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths } from "next";
 
 import { IProjects } from "../../types";
 import client from "../../api/sanityClient";
@@ -9,15 +9,30 @@ import Container from "../../components/Container/Container";
 import Button from "../../components/UI/Button/Button";
 
 const ProjectDetails = ({ project }: { project: IProjects }) => {
-  console.log('project url:', project.websiteUrl);
+  console.log("project url:", project.websiteUrl);
   const router = useRouter();
 
   if (!project) {
     return (
       <Container>
-        <h2 className="mt-20 text-center text-red-500 font-bold">
-          Project not found
-        </h2>
+        <div className="alert alert-error shadow-lg">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="stroke-current flex-shrink-0 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>Project Not Found</span>
+          </div>
+        </div>
       </Container>
     );
   }
@@ -64,7 +79,7 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
           )}
         </div>
         <div className="mt-10">
-        <Contact />
+          <Contact />
         </div>
       </Container>
     </div>
@@ -73,7 +88,7 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
 
 export default ProjectDetails;
 
-export const getStaticProps: GetStaticProps = async (context) =>  {
+export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
   if (!params) return { props: {} };
 
@@ -91,7 +106,7 @@ export const getStaticProps: GetStaticProps = async (context) =>  {
   }
 
   return { props: {} };
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const projects = await client.fetch(`*[_type == "projects"]`);
@@ -109,4 +124,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false,
   };
-}
+};

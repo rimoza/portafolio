@@ -2,10 +2,10 @@ import React from "react";
 
 import Heading from "../../UI/Heading";
 import { IProjects } from "../../../types";
+import Spinner from "../../Spinner/Spinner";
 import classes from "./ProjectList.module.css";
 import Container from "../../Container/Container";
 import Project from "../ProjectsItem/ProjectItem";
-import Spinner from "../../Spinner/Spinner";
 
 const ProjectList = ({ projects }: { projects: IProjects[] }) => {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ISkills } from "../../types";
+import Spinner from "../Spinner/Spinner";
 import classes from "./Skills.module.css";
 import SkillsItem from "./SkillsItem/SkillsItem";
 
@@ -14,7 +15,7 @@ const SkillList = ({ skills }: { skills: ISkills[] }) => {
           </div>
         ))}
       </ul>
-      {skills.length <= 0 && <p>No skills to show</p>}
+      {skills.length <= 0 && <Spinner />}
     </>
   );
 };
