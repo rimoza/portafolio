@@ -14,7 +14,7 @@ const ProjectList = ({ projects }: { projects: IProjects[] }) => {
           <Heading>Projects</Heading>
         </div>
         <div className={classes.grid_projects}>
-          {projects.map((project: IProjects) => (
+          {projects.length > 0 && projects.map((project: IProjects) => (
             <Project key={project._id} project={project} />
           ))}
         </div>
