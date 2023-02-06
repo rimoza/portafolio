@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import classes from "./Footer.module.css";
 import Container from "../Container/Container";
@@ -43,7 +44,7 @@ function Footer() {
         <ul className={classes.list}>
           {footerNavs.map((item, idx) => (
             <li className=" hover:text-gray-800" key={idx}>
-              <a href={item.href}>{item.name}</a>
+              <Link href={item.href}>{item.name}</Link>
             </li>
           ))}
         </ul>
