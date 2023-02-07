@@ -1,9 +1,9 @@
 .section {
-  @apply bg-base-100 text-gray-700 relative dark:text-white;
+  @apply bg-base-100 text-dark relative dark:text-ternary;
 }
 
 .socialIcons_wrapper {
-  @apply absolute top-64 ml-3 hidden md:block bg-white drop-shadow-md p-5 rounded-md;
+  @apply absolute md:top-40 lg:top-64 ml-3 hidden md:block bg-[#fff] drop-shadow-md p-5 rounded-md;
 }
 
 .wrapper {
@@ -11,11 +11,11 @@
 }
 
 .bottom_section {
-  @apply mx-auto max-w-3xl text-center md:-mt-48;
+  @apply mx-auto max-w-3xl text-center lg:-mt-48;
 }
 
 .title {
-  @apply bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl;
+  @apply bg-gradient-to-r from-ternary via-primary to-secondary bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl;
 }
 
 .text {
@@ -25,15 +25,15 @@
 .btn_wrapper {
   @apply mt-8 flex flex-wrap justify-center gap-4;
 }
-
+ 
 .btn {
-  @apply block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium;
+  @apply block w-full rounded border border-primary px-12 py-3 text-sm font-medium;
 }
 
 .btn_project {
-  @apply bg-primary  text-white hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto;
+  @apply bg-primary  text-ternary hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto;
 }
 
 .btn_contact {
-  @apply text-primary hover:text-white bg-white hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto;
+  @apply text-primary hover:text-[#fff] bg-[#fff] hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto;
 }

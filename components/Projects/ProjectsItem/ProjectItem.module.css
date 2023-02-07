@@ -1,11 +1,11 @@
 .projectItem {
-  @apply transform hover:scale-[1.01] transition-all rounded-xl w-full bg-gradient-to-r p-1 from-[#D8B4FE] to-[#818CF8];
+  @apply transform hover:scale-[1.01] transition-all rounded-xl w-full bg-gradient-to-r p-1 from-error to-secondary;
 }
 
 .projectTitle {
-  @apply flex flex-col justify-between gap-5 h-full bg-white rounded-lg p-4;
+  @apply flex flex-col justify-between gap-5 h-full bg-[#fff] rounded-lg p-4;
 }
 
 .btn_item {
-  @apply btn btn-primary hover:bg-white hover:text-primary;
+  @apply btn btn-primary hover:bg-[#fff] hover:text-primary;
 }

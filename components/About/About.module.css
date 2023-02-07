@@ -1,9 +1,9 @@
 .about_wrapper {
-  @apply my-32 mx-5 md:mx-5;
+  @apply my-32 py-10 bg-ternary;
 }
 
 .about_title {
-  @apply text-center text-xl md:text-2xl text-gray-400 mt-5 mb-10;
+  @apply text-center text-xl md:text-2xl text-dark mt-5 mb-10;
 }
 
 .about_grid {
@@ -11,7 +11,7 @@
 }
 
 .btn {
-  @apply block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:text-primary bg-primary hover:bg-white focus:outline-none focus:ring active:bg-primary sm:w-auto;
+  @apply block w-full rounded border border-primary px-12 py-3 text-sm font-medium text-whiteColor hover:text-primary bg-primary hover:bg-[#fff] focus:outline-none focus:ring active:bg-primary sm:w-auto;
 }
 
 .bottom_title {
@@ -19,5 +19,5 @@
 }
 
 .left_text {
-  @apply leading-7 text-[17px] text-gray-500;
+  @apply leading-7 text-[17px] text-dark;
 }

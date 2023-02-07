@@ -7,5 +7,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [require("daisyui")],
-  theme: {},
+  theme: {
+    colors: {
+      primary:'#14248A',
+      secondary:'#F9F5FF',
+      ternary:'#D4C2FC',
+      error: '#dc2626',
+      dark: '#28262C',
+      whiteColor: '#ffffff',
+    }
+  },
 };
