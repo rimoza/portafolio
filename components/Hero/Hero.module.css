@@ -27,11 +27,11 @@
 }
  
 .btn {
-  @apply block w-full rounded border border-primary px-12 py-3 text-sm font-medium;
+  @apply block w-full rounded border border-primary px-12 py-3 text-[20px] font-medium;
 }
 
 .btn_project {
-  @apply bg-primary  text-ternary hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto;
+  @apply bg-primary  text-[#fff] hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-opacity-75 sm:w-auto;
 }
 
 .btn_contact {

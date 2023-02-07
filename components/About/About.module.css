@@ -19,5 +19,5 @@
 }
 
 .left_text {
-  @apply leading-7 text-[17px] text-dark;
+  @apply mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed;
 }
