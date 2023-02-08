@@ -43,7 +43,7 @@ function Footer() {
         </div>
         <ul className={classes.list}>
           {footerNavs.map((item, idx) => (
-            <li className=" hover:text-gray-800" key={idx}>
+            <li className=" hover:text-bg" key={idx}>
               <Link href={item.href}>{item.name}</Link>
             </li>
           ))}

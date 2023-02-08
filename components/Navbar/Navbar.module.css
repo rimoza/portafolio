@@ -1,5 +1,5 @@
 .navbar {
-  @apply w-full md:fixed top-0 z-10 sm:bg-[#fff] md:bg-ternary;
+  @apply w-full static;
 }
 
 .wrapper {
@@ -11,7 +11,7 @@
 }
 
 .btn {
-  @apply text-dark outline-none p-2 rounded-md;
+  @apply text-bg outline-none p-2 rounded-md;
 }
 
 .state {
@@ -23,9 +23,9 @@
 }
 
 .list_items {
-  @apply bg-[#fff] rounded-md text-primary md:text-primary font-bold px-5 py-2 hover:text-primary md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300 uppercase;
+  @apply border border-primary rounded-md text-primary md:text-primary font-bold px-5 py-2 hover:text-primary md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300 uppercase;
 }
 
 .btn_link {
-  @apply border-none bg-[#fff] py-2 px-3 text-primary md:text-primary font-bold hover:text-primary md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300;
+  @apply border border-primary py-2 px-3 text-primary md:text-primary font-bold hover:text-primary md:transition md:ease-in-out delay-150 hover:-translate-y-1 md:hover:scale-110 duration-300;
 }

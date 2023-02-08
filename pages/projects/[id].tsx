@@ -57,7 +57,7 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
             height={500}
           />
         </div>
-        <h1 className="mt-6 text-xl font-bold text-dark lg:text-4xl">
+        <h1 className="mt-6 text-xl font-bold text-bg lg:text-4xl">
           {project.name}
         </h1>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

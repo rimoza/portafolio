@@ -1,5 +1,5 @@
 .wrapper {
-  @apply bg-base-100 py-16;
+  @apply py-16;
 }
 
 .grid_projects {

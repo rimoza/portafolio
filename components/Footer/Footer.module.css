@@ -1,5 +1,5 @@
 .footer {
-  @apply text-dark mt-20 px-4 py-5 mx-auto bg-ternary;
+  @apply px-4 pt-10 pb-5 mx-auto;
 }
 
 .logo {
@@ -7,7 +7,7 @@
 }
 
 .text {
-  @apply mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed;
+  @apply mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed font-normal;
 }
 
 .list {

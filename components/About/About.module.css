@@ -1,9 +1,9 @@
 .about_wrapper {
-  @apply my-32 py-10 bg-ternary;
+  @apply py-10 dark:bg-bg dark:text-[#fff];
 }
 
 .about_title {
-  @apply text-center text-xl md:text-2xl text-dark mt-5 mb-10;
+  @apply text-center text-xl md:text-2xl font-bold mt-5 mb-10;
 }
 
 .about_grid {
@@ -19,5 +19,5 @@
 }
 
 .left_text {
-  @apply mx-5 md:mx-0 mt-4 max-w-xl sm:text-xl sm:leading-relaxed;
+  @apply mx-5 md:mx-0 mt-4 max-w-xl sm:text-xl sm:leading-relaxed dark:text-[#fff];
 }

@@ -10,14 +10,14 @@ import ProjectList from "../components/Projects/Projects/ProjectList";
 
 export default function Home({ skills, projects }: { skills: ISkills[], projects: IProjects[] }) {
   return (
-    <>
+    <div>
       <Hero />
       <section>
         <AboutMe skills={skills} />
       </section>
       <ProjectList projects={projects} />
       <Contact />
-    </>
+    </div>
   );
 }
 

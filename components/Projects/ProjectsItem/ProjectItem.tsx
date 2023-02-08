@@ -16,7 +16,7 @@ const ProjectItem = ({ project }: { project: IProjects }) => {
   return (
     <Link href={`/projects/${project._id}`} className={classes.projectItem}>
       <div className={classes.projectTitle}>
-        <span className="text-gray-500"> {project.title} </span>
+        <span className="dark:text-bg"> {project.title} </span>
         <Button
           className={classes.btn_item}
           onClick={() => router.push(`/projects/${project._id}`)}
