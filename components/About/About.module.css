@@ -3,7 +3,7 @@
 }
 
 .about_title {
-  @apply text-center text-xl md:text-2xl font-bold mt-5 mb-10;
+  @apply text-center text-xl md:text-2xl font-bold mt-5 mb-10 mx-5 md:mx-0;
 }
 
 .about_grid {
