@@ -41,10 +41,10 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
     <div className="w-full px-6 py-16 text-center bg-white mt-32">
       <Container>
         <div className="mx-auto">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl">
+          <h1 className="text-3xl font-bold text-gray-800 lg:text-4xl">
             {project.title}
           </h1>
-          <p className="mt-6 text-gray-500 dark:text-gray-300">
+          <p className="mt-6 text-gray-500">
             {project.description}
           </p>
         </div>
@@ -57,7 +57,7 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
             height={500}
           />
         </div>
-        <h1 className="mt-6 text-xl font-bold text-dark dark:text-white lg:text-4xl">
+        <h1 className="mt-6 text-xl font-bold text-dark lg:text-4xl">
           {project.name}
         </h1>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

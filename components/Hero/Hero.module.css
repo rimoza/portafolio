@@ -1,5 +1,5 @@
 .section {
-  @apply bg-base-100 text-dark relative dark:text-ternary;
+  @apply bg-base-100 text-dark relative;
 }
 
 .socialIcons_wrapper {
