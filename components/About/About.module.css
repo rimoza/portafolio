@@ -15,7 +15,7 @@
 }
 
 .bottom_title {
-  @apply text-3xl font-bold mb-4;
+  @apply text-3xl font-bold mb-4 mx-5 md:mx-0;
 }
 
 .left_text {

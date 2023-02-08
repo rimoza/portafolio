@@ -33,7 +33,7 @@ const Hero = () => {
 
             <Link href="#contact">
               <Button className={`${classes.btn} ${classes.btn_contact}`}>
-                CONTACT ME
+                CONTACT
               </Button>
             </Link>
           </div>
