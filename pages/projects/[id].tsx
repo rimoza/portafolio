@@ -38,7 +38,7 @@ const ProjectDetails = ({ project }: { project: IProjects }) => {
   }
 
   return (
-    <div className="w-full px-6 py-16 text-center bg-white mt-32">
+    <div className="w-full px-6 py-16 text-justify bg-white mt-32">
       <Container>
         <div className="mx-auto">
           <h1 className="text-3xl font-bold text-gray-800 lg:text-4xl">

@@ -11,7 +11,7 @@
 }
 
 .btn {
-  @apply text-bg outline-none p-2 rounded-md;
+  @apply text-bg outline-none p-2 rounded-md cursor-pointer;
 }
 
 .state {
