@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - sanity-project
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
