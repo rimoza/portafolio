@@ -17,7 +17,7 @@ const ArticleITem = ({ article }: { article: any }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{article.title}</h2>
-          <p>Author || {article.author} </p>
+          <p> <span className='font-semibold'>Author</span> | {article.author} </p>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Tags: {article.tags.join(' , ')} </div>
           </div>
