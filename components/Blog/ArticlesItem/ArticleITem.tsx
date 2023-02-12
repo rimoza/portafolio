@@ -6,7 +6,7 @@ const ArticleITem = ({ article }: { article: any }) => {
   return (
     <Link href={`/blogs/${article.id}`} className='transform hover:scale-[1.01] transition-all'>
       <div className="card w-full md:w-96 bg-base-100 dark:bg-bg">
-        <figure className="p-10">
+        <figure className="p-5">
           <Image
             src={article.featuredImage}
             alt={article.title}
