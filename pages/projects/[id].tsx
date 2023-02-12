@@ -9,7 +9,6 @@ import Container from "../../components/Container/Container";
 import Button from "../../components/UI/Button/Button";
 
 const ProjectDetails = ({ project }: { project: IProjects }) => {
-  console.log("project url:", project.websiteUrl);
   const router = useRouter();
 
   if (!project) {
