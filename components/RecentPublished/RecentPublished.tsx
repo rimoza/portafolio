@@ -12,9 +12,9 @@ const RecentPublished = ({ articlesData }: { articlesData: any }) => {
           <Link
             href={`/blogs?id=${article.id}`}
             key={article.id}
-            className="mb-8 cursor-pointer hover:underline w-full dark:text-bg"
+            className="mb-8 cursor-pointer hover:underline w-full dark:text-[#fff] dark:bg-bg"
           >
-            <div className="px-4 py-5 bg-base-100 dark:text-bg rounded-md shadow-md" key={article.id}>
+            <div className="px-4 py-5 bg-base-100 dark:text-[#fff] dark:bg-bg rounded-md shadow-md" key={article.id}>
               <h3 className="text-xl font-bold mt-4">{article.title}</h3>
               <p className="text-gray-600 mt-2">
                 {article.content.introduction.substring(0, 100)}...

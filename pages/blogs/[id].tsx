@@ -19,7 +19,7 @@ const BlogItemPage = () => {
   return (
     <Container>
       <ArticleHero title={article.title} imageUrl={article.featuredImage} />
-      <div className="">
+      <div className="mx-5 md:mx-0">
         <h1 className="text-2xl font-bold mb-4">{article.title}</h1>
         <p className="text-sm text-gray-600 mb-4 italic">
           by {article.author} on {article.datePublished}
