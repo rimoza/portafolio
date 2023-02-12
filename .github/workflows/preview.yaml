@@ -7,7 +7,7 @@ on:
     branches-ignore:
       - main
     paths-ignore:
-      - sanity-project
+      - 'sanity-project/**'
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
