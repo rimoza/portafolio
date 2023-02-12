@@ -1,19 +1,26 @@
 import React from "react";
+import Link from "next/link";
 
 const RecentPublished = ({ articlesData }: { articlesData: any }) => {
-    const latestTwoPosts = articlesData.slice(0, 3);
+  const latestTwoPosts = articlesData.slice(0, 3);
 
   return (
     <section className="py-12">
       <h2 className="text-3xl font-bold mb-6">Recently Published</h2>
-      <div className="flex flex-wrap -mx-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {latestTwoPosts.map((article: any) => (
-          <div className="w-1/3 px-4 mb-8" key={article.id}>
-            <h3 className="text-xl font-bold mt-4">{article.title}</h3>
-            <p className="text-gray-600 mt-2">
-              {article.content.introduction.substring(0, 100)}...
-            </p>
-          </div>
+          <Link
+            href={`/blogs?id=${article.id}`}
+            key={article.id}
+            className="mb-8 cursor-pointer hover:underline w-full dark:text-bg"
+          >
+            <div className="px-4 py-5 bg-base-100 dark:text-bg rounded-md shadow-md" key={article.id}>
+              <h3 className="text-xl font-bold mt-4">{article.title}</h3>
+              <p className="text-gray-600 mt-2">
+                {article.content.introduction.substring(0, 100)}...
+              </p>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
