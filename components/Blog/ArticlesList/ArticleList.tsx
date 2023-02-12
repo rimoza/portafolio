@@ -3,10 +3,12 @@ import React from "react";
 import Heading from "../../UI/Heading";
 import Container from "../../Container/Container";
 import ArticleITem from "../ArticlesItem/ArticleITem";
+import ArticleHero from "../../ArticleHero/ArticleHero";
 
 const ArticleList = ({ articlesData }: { articlesData: any }) => {
   return (
     <Container>
+        <ArticleHero title='All Articles' imageUrl="/images/box3.png" />
       <div className="my-10">
         <Heading>Articles</Heading>
       </div>
