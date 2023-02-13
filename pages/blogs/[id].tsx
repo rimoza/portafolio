@@ -9,8 +9,8 @@ import Container from "../../components/Container/Container";
 import ArticleHero from "../../components/ArticleHero/ArticleHero";
 import RecentPublished from "../../components/RecentPublished/RecentPublished";
 
-const BlogItemPage = ({ article }: { article: IBlogPostData}) => {
-  console.log('article:', article)
+const BlogItemPage = ({ article, recentPublished }: { article: IBlogPostData, recentPublished:IBlogPostData[] }) => {
+console.log('blogs:', recentPublished);
   const router = useRouter();
 
   if (!article) {
@@ -84,7 +84,7 @@ const BlogItemPage = ({ article }: { article: IBlogPostData}) => {
           />
         </div>
       </div>
-      <RecentPublished article={article} />
+      <RecentPublished recentPublished={recentPublished} />
     </Container>
   );
 };
@@ -93,17 +93,18 @@ export default BlogItemPage;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
-  console.log('params:', params);
   if (!params) return { props: {} };
 
   const query = `*[_id == $itemId] {_id, title, author, datePublished, 'imageUrl': featuredImage.asset->url, category, tags[], content}`;
-  console.log('query:', query);
+  const recentPublished = await client.fetch(`*[_type == "blogs"] | {_id, title, author, datePublished, 'imageUrl': featuredImage.asset->url, category, tags[], content}`);
 
   try {
     const article = await client.fetch(query, { itemId: params.id });
+
     return {
       props: {
         article: article[0],
+        recentPublished,
       },
     };
   } catch (error) {
@@ -115,8 +116,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const blogs = await client.fetch(`*[_type == "blogs"] | {_id, title, author, datePublished, 'imageUrl': featuredImage.asset->url, category, tags[], content}`);
-    console.log('blogs:', blogs);
-
+   
   if (!blogs) return { paths: [], fallback: false };
 
   const paths =

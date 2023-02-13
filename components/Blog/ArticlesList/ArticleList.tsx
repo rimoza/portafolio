@@ -1,10 +1,10 @@
 import React from "react";
 
 import Heading from "../../UI/Heading";
+import { IBlogPostData } from "../../../types";
 import Container from "../../Container/Container";
 import ArticleITem from "../ArticlesItem/ArticleITem";
 import ArticleHero from "../../ArticleHero/ArticleHero";
-import { IBlogPostData } from "../../../types";
 
 const ArticleList = ({ blogs }: { blogs: IBlogPostData[] }) => {
   

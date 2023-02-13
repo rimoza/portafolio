@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import client from '../../api/sanityClient';
+import client from "../../api/sanityClient";
 
-import { IBlogPostData } from '../../types';
-import Container from '../../components/Container/Container';
-import ArticleList from '../../components/Blog/ArticlesList/ArticleList';
+import { IBlogPostData } from "../../types";
 
-const BlogPage = ( { blogs }: { blogs: IBlogPostData[] } ) => {
-  
-    if (!blogs) {
-      return (
-        <Container>
-          <div className="h-[500px] flex justify-center items-center">
+import Container from "../../components/Container/Container";
+import ArticleList from "../../components/Blog/ArticlesList/ArticleList";
+
+const BlogPage = ({ blogs }: { blogs: IBlogPostData[] }) => {
+  if (!blogs) {
+    return (
+      <Container>
+        <div className="h-[500px] flex justify-center items-center">
           <div className="alert bg-[#bcb9b9] shadow-lg">
             <div>
               <svg
@@ -30,23 +30,24 @@ const BlogPage = ( { blogs }: { blogs: IBlogPostData[] } ) => {
               <span className="text-xl font-semibold">No Articles Found</span>
             </div>
           </div>
-          </div>
-        </Container>
-      );
-    }
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <div>
-        <ArticleList blogs={blogs} />
+      <ArticleList blogs={blogs} />
     </div>
-  )
-}
+  );
+};
 
 export default BlogPage;
 
-
 export async function getStaticProps() {
-  const blogs = await client.fetch(`*[_type == "blogs"] | {_id, title, author, datePublished, 'imageUrl': featuredImage.asset->url, category, tags[], content}`);
+  const blogs = await client.fetch(
+    `*[_type == "blogs"] | {_id, title, author, datePublished, 'imageUrl': featuredImage.asset->url, category, tags[], content}`
+  );
   return {
     props: {
       blogs,
