@@ -2,13 +2,16 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ArticleITem = ({ article }: { article: any }) => {
+import { IBlogPostData } from "../../../types";
+
+const ArticleITem = ({ article }: { article: IBlogPostData }) => {
+
   return (
-    <Link href={`/blogs/${article.id}`} className='transform hover:scale-[1.01] transition-all'>
+    <Link href={`/blogs/${article._id}`}  className='transform hover:scale-[1.01] transition-all'>
       <div className="card w-full md:w-96 bg-base-100 dark:text-bg">
         <figure className="p-5">
           <Image
-            src={article.featuredImage}
+            src={article.imageUrl}
             alt={article.title}
             width={500}
             height={500}

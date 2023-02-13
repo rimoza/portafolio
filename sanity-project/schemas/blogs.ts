@@ -1,6 +1,6 @@
 export default {
-    name: "article",
-    title: "Article",
+    name: "blogs",
+    title: "Blogs",
     type: "document",
     fields: [
       {

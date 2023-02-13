@@ -16,19 +16,21 @@ export interface ISkills {
   title?: string;
 }
 
-export interface BlogPostData {
+export interface IBlogPostData {
+  slice(arg0: number, arg1: number): any;
+  _id: string;
+  imageUrl: string;
   id: string;
   title: string;
   author: string;
-  date_published: string;
-  featured_image: string;
+  datePublished: string;
   category: string;
   tags: string[];
   content: {
     introduction: string;
     body: string;
     steps: {
-      step_number: number;
+      stepNumber: number;
       instruction: string;
     }[];
     category: string;

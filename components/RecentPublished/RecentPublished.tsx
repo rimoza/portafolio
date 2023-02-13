@@ -1,16 +1,18 @@
 import React from "react";
 import Link from "next/link";
 
-const RecentPublished = ({ articlesData }: { articlesData: any }) => {
-  const latestTwoPosts = articlesData.slice(0, 3);
+import { IBlogPostData } from "../../types";
+
+const RecentPublished = ({ article }: { article: IBlogPostData }) => {
+  // const latestTwoPosts = article?.slice(0, 3);
 
   return (
     <section className="py-12">
       <h2 className="text-3xl font-bold mb-6">Recently Published</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {latestTwoPosts.map((article: any) => (
+        
           <Link
-            href={`/blogs?id=${article.id}`}
+            href={`/blogs?id=${article._id}`}
             key={article.id}
             className="mb-8 cursor-pointer hover:underline w-full dark:text-[#fff] dark:bg-bg"
           >
@@ -21,7 +23,6 @@ const RecentPublished = ({ articlesData }: { articlesData: any }) => {
               </p>
             </div>
           </Link>
-        ))}
       </div>
     </section>
   );

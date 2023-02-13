@@ -4,8 +4,10 @@ import Heading from "../../UI/Heading";
 import Container from "../../Container/Container";
 import ArticleITem from "../ArticlesItem/ArticleITem";
 import ArticleHero from "../../ArticleHero/ArticleHero";
+import { IBlogPostData } from "../../../types";
 
-const ArticleList = ({ articlesData }: { articlesData: any }) => {
+const ArticleList = ({ blogs }: { blogs: IBlogPostData[] }) => {
+  
   return (
     <Container>
         <ArticleHero title='All Articles' imageUrl="/images/box3.png" />
@@ -13,8 +15,8 @@ const ArticleList = ({ articlesData }: { articlesData: any }) => {
         <Heading>Articles</Heading>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 md:mx-0">
-        {articlesData.map((article: any) => (
-            <ArticleITem key={article.id} article={article} />
+        {blogs.map((article: IBlogPostData) => (
+            <ArticleITem key={article._id} article={article} />
         ))}
       </div>
     </Container>
