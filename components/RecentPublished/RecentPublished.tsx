@@ -7,7 +7,7 @@ const RecentPublished = ({ recentPublished }: { recentPublished: IBlogPostData[]
   const latestTwoPosts = recentPublished.slice(0, 3);
 
   return (
-    <section className="py-12">
+    <section className="py-12 mx-5 md:mx-0">
       <h2 className="text-3xl font-bold mb-6">Recently Published</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {latestTwoPosts.map((article: IBlogPostData) => (
@@ -18,6 +18,7 @@ const RecentPublished = ({ recentPublished }: { recentPublished: IBlogPostData[]
           >
             <div className="px-4 py-5 bg-base-100 dark:text-[#fff] dark:bg-base-100 rounded-md shadow-md">
               <h3 className="text-xl font-bold mt-4">{article.title}</h3>
+              <p className="text-sm italic font-semibold mt-4">Date Published: {article.datePublished}</p>
               <p className="text-gray-600 mt-2">
                 {article.content.introduction.substring(0, 100)}...
               </p>
