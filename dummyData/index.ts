@@ -107,7 +107,7 @@ export const articlesData = [
   },
   {
     id: "article-2",
-    title: "How to Make the Perfect Cup of Coffee",
+    title: "I Didn’t Cry When Tom Brady Retired",
     author: "Ridwan Mohamed",
     datePublished: "2022-12-01",
     featuredImage: "/images/box2.png",
@@ -115,8 +115,8 @@ export const articlesData = [
     tags: ["coffee", "brewing", "tips"],
     content: {
       introduction:
-        "Making the perfect cup of coffee takes more than just brewing coffee beans. It requires attention to detail and a proper understanding of the brewing process.",
-      body: "Week 1-2: Start by gradually increasing your mileage each week, focusing on building up your endurance. Aim to run 3-4 times per week for 30-45 minutes at a time. Week 3-4: Incorporate interval training into your routine. Alternate between running at a moderate pace for 1 minute and sprinting for 30 seconds. Week 5-6: Increase the length of your runs to 1 hour. Start incorporating hills into your runs to build strength. Week 7-8: Taper your mileage in the final two weeks to allow your body to rest and recover. During this time, focus on shorter, faster runs to maintain your speed.",
+        "Myfather once told me that the only time he ever saw his dad cry was when Bob Cousy retired from the Boston Celtics. This says a lot about what it took to get a man to reveal his feelings of pain and loss in 1963.",
+      body: "It also says a lot about Cousy, whose six championships with the Celtics match up nicely with Tom Brady’s six Super Bowls for the New England Patriots. I was never an athlete, and I never followed sports until the ascension of Larry Bird; which happened to dovetail perfectly with my high school years. Together, these facts partially explain the total sense of disconnection I felt from my grandfather’s reaction.",
       steps: [
         {
           stepNumber: 1,
