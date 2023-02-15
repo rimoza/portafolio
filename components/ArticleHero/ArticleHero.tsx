@@ -1,6 +1,6 @@
 import React from "react";
 
-const ArticleHero = ({ title, imageUrl }: { title: any; imageUrl: any }) => {
+const ArticleHero = ({ title, imageUrl }: { title: ""; imageUrl: "" }) => {
   return (
     <div
       className="bg-cover bg-center h-64 my-20"
