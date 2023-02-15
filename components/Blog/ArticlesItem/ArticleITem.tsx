@@ -5,10 +5,12 @@ import Image from "next/image";
 import { IBlogPostData } from "../../../types";
 
 const ArticleITem = ({ article }: { article: IBlogPostData }) => {
-
   return (
-    <Link href={`/blogs/${article._id}`}  className='transform hover:scale-[1.01] transition-all'>
-      <div className="card w-full md:w-96 bg-base-100 dark:text-bg">
+    <div className="card w-full md:w-96 bg-base-100 dark:text-bg">
+      <Link
+        href={`/blogs/${article._id}`}
+        className="transform hover:scale-[1.01] transition-all"
+      >
         <figure className="p-5">
           <Image
             src={article.imageUrl}
@@ -20,13 +22,17 @@ const ArticleITem = ({ article }: { article: IBlogPostData }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{article.title}</h2>
-          <p> <span className='font-semibold'>Author</span> | {article.author} </p>
+          <p>
+            <span className="font-semibold">Author</span> | {article.author}
+          </p>
           <div className="card-actions justify-end">
-            <div className="badge badge-outline">Tags: {article.tags.join(' , ')} </div>
+            <div className="badge badge-outline">
+              Tags: {article.tags.join(" , ")}
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

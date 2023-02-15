@@ -9,6 +9,11 @@ export default {
         type: 'string'
       },
       {
+        title: 'Icon',
+        name: 'icon',
+        type: 'image',
+      },
+      {
         name: 'keywords',
         title: 'Keywords',
         type: 'array',

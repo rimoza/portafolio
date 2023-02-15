@@ -10,7 +10,7 @@ const ArticleList = ({ blogs }: { blogs: IBlogPostData[] }) => {
   
   return (
     <Container>
-        <ArticleHero title='All Articles' imageUrl="/images/box3.png" />
+        <ArticleHero title='Under development' imageUrl="/images/box3.png" />
       <div className="my-10">
         <Heading>Under construction</Heading>
       </div>
