@@ -32,5 +32,5 @@ export interface IBlogPostData {
     conclusion: string;
   };
   _id?: string;  // Make this optional
-  imageUrl?: string;  // Make this optional
+  imageUrl: string;  // Make this optional
 }
