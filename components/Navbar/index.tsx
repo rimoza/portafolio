@@ -36,9 +36,9 @@ function Navbar() {
             <div className="md:hidden">
               <Button className={classes.btn} onClick={() => setState(!state)}>
                 {state ? (
-                  <BsXLg className="text-2xl text-primary dark:text-[#fff]" />
+                  <BsXLg className="text-2xl text-primary" />
                   ) : (
-                  <BsList className="text-2xl text-primary dark:text-[#fff]" />
+                  <BsList className="text-2xl text-primary" />
                 )}
               </Button>
             </div>

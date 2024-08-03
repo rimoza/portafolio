@@ -1,5 +1,5 @@
 .about_wrapper {
-  @apply py-10 dark:bg-bg dark:text-[#fff];
+  @apply py-10;
 }
 
 .about_title {
@@ -19,5 +19,5 @@
 }
 
 .left_text {
-  @apply mx-5 md:mx-0 mt-4 max-w-xl sm:text-xl sm:leading-relaxed dark:text-[#fff];
+  @apply mx-5 md:mx-0 mt-4 max-w-xl sm:text-xl sm:leading-relaxed;
 }
