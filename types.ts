@@ -1,15 +1,13 @@
 export interface IProjects {
-  websiteUrl: string;
-  type: string;
-  imageUrl: string;
-  _id: string;
   id: string;
   name: string;
   title: string;
-  image: string;
   description: string;
+  image: string;
+  websiteUrl?: string;
+  type?: string;
+  imageUrl?: string;
 }
-
 export interface ISkills {
   id?: string;
   name: string;
@@ -17,13 +15,11 @@ export interface ISkills {
 }
 
 export interface IBlogPostData {
-  slice(arg0: number, arg1: number): any;
-  _id: string;
-  imageUrl: string;
   id: string;
   title: string;
   author: string;
   datePublished: string;
+  featuredImage: string;
   category: string;
   tags: string[];
   content: {
@@ -33,7 +29,8 @@ export interface IBlogPostData {
       stepNumber: number;
       instruction: string;
     }[];
-    category: string;
     conclusion: string;
   };
+  _id?: string;  // Make this optional
+  imageUrl?: string;  // Make this optional
 }

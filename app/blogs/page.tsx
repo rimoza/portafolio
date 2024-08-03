@@ -1,14 +1,13 @@
 import React from "react";
-
-import client from "../../api/sanityClient";
-
 import { IBlogPostData } from "../../types";
-
 import Container from "../../components/Container/Container";
 import ArticleList from "../../components/Blog/ArticlesList/ArticleList";
+import { articlesData } from "../../dummyData";
 
-const BlogPage = ({ blogs }: { blogs: IBlogPostData[] }) => {
-  if (!blogs) {
+export default function BlogPage() {
+  const blogs: IBlogPostData[] = articlesData;
+
+  if (!blogs || blogs.length === 0) {
     return (
       <Container>
         <div className="h-[500px] flex justify-center items-center">
@@ -40,17 +39,4 @@ const BlogPage = ({ blogs }: { blogs: IBlogPostData[] }) => {
       <ArticleList blogs={blogs} />
     </div>
   );
-};
-
-export default BlogPage;
-
-export async function getStaticProps() {
-  const blogs = await client.fetch(
-    `*[_type == "blogs"] | {_id, title, author, datePublished, 'imageUrl': featuredImage.asset->url, category, tags[], content}`
-  );
-  return {
-    props: {
-      blogs,
-    },
-  };
 }

@@ -1,6 +1,7 @@
-import React from "react";
+"use client"
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 import { IProjects } from "../../../types";
 import Button from "../../UI/Button/Button";
@@ -14,12 +15,12 @@ const ProjectItem = ({ project }: { project: IProjects }) => {
   };
 
   return (
-    <Link href={`/projects/${project._id}`} className={classes.projectItem}>
+    <Link href={`/projects/${project.id}`} className={classes.projectItem}>
       <div className={classes.projectTitle}>
         <span className="dark:text-bg"> {project.title} </span>
         <Button
           className={classes.btn_item}
-          onClick={() => router.push(`/projects/${project._id}`)}
+          onClick={() => router.push(`/projects/${project.id}`)}
         >
           See More
         </Button>
