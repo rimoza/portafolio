@@ -23,22 +23,22 @@ const ContactPage = () => {
               <div className="space-y-4">
                 <p className="flex items-center">
                   <FaEnvelope className="mr-2" />
-                  youremail@example.com
+                  ridwan.maxamed1@gmail.com
                 </p>
                 <p className="flex items-center">
                   <FaPhone className="mr-2" />
-                  +1 (123) 456-7890
+                  +251 (09) 012 65136
                 </p>
                 <p className="flex items-center">
                   <FaMapMarkerAlt className="mr-2" />
-                  Your City, Country
+                  Addis Ababa, Ethiopia
                 </p>
               </div>
               <div className="mt-8">
                 <h3 className="text-xl font-semibold mb-4">Connect with me</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/ridwan-mohamed-363477161/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-gray-200 transition-colors duration-300"
@@ -46,7 +46,7 @@ const ContactPage = () => {
                     <FaLinkedin size={24} />
                   </a>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/rimoza"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-gray-200 transition-colors duration-300"
@@ -54,7 +54,7 @@ const ContactPage = () => {
                     <FaGithub size={24} />
                   </a>
                   <a
-                    href="https://twitter.com/yourhandle"
+                    href="https://x.com/rimoza_10"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-gray-200 transition-colors duration-300"
