@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
-
-// Import the caseStudies array
-import { caseStudies } from "../page";
+import { caseStudies } from "../caseStudiesData";
 
 export async function generateStaticParams() {
   return caseStudies.map((study) => ({
