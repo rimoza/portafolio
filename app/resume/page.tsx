@@ -10,9 +10,9 @@ import {
 const ResumePage = () => {
   const workExperience = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Innovators Inc.",
-      period: "2020 - Present",
+      title: "Full Stack Developer",
+      company: "Bigil Tech.",
+      period: "2021 - 2023",
       responsibilities: [
         "Lead a team of 5 developers in creating responsive web applications",
         "Implemented new React-based architecture, improving performance by 40%",
@@ -20,9 +20,9 @@ const ResumePage = () => {
       ],
     },
     {
-      title: "Frontend Developer",
-      company: "WebSolutions Co.",
-      period: "2017 - 2020",
+      title: "Full Stack Developer",
+      company: "Neogrant Oy.",
+      period: "2023 - present",
       responsibilities: [
         "Developed and maintained multiple client websites using React and Next.js",
         "Collaborated with UX designers to implement pixel-perfect, responsive designs",
@@ -33,14 +33,9 @@ const ResumePage = () => {
 
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Tech University",
-      year: "2017",
-    },
-    {
-      degree: "Bachelor of Science in Web Development",
-      school: "Digital College",
-      year: "2015",
+      degree: "Bachelor of Science in Computer Science",
+      school: "New Generation University College", 
+      year: "2020",
     },
   ];
 
@@ -57,11 +52,11 @@ const ResumePage = () => {
     "Agile Methodologies",
   ];
 
-  const certifications = [
-    "AWS Certified Developer - Associate",
-    "Google Cloud Certified - Professional Cloud Architect",
-    "React Native Specialist Certification",
-  ];
+  // const certifications = [
+  //   "AWS Certified Developer - Associate",
+  //   "Google Cloud Certified - Professional Cloud Architect",
+  //   "React Native Specialist Certification",
+  // ];
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -72,7 +67,7 @@ const ResumePage = () => {
 
         <div className="mb-8 text-center">
           <a
-            href="/path-to-your-resume.pdf"
+            href="/Ridwan-cv.pdf"
             download
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-300"
           >
@@ -142,7 +137,7 @@ const ResumePage = () => {
           </div>
         </div>
 
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="px-6 py-4 bg-primary text-white">
             <h2 className="text-2xl font-bold flex items-center">
               <FaAward className="mr-2" /> Certifications
@@ -155,7 +150,7 @@ const ResumePage = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -5,31 +5,31 @@ import { FaArrowRight } from "react-icons/fa";
 
 const caseStudies = [
   {
-    id: "ecommerce-redesign",
-    title: "E-commerce Website Redesign",
-    client: "FashionHub",
+    id: "afmaal",
+    title: "Afmaal App",
+    client: "Mazeed Technology",
     brief:
-      "Revamped the online shopping experience, resulting in a 200% increase in conversion rates.",
-    image: "/images/case-study-ecommerce.jpg",
-    tags: ["E-commerce", "UI/UX", "React"],
+      "Afmaal APP is a vocabulary builder designed to enhance language learning in English. This project was both an exciting and challenging endeavor, reflecting my commitment to creating tools that facilitate learning and bridge language gaps.",
+    image: "/images/afmaal.PNG",
+    tags: ["Education", "PWA", "React"],
   },
   {
-    id: "saas-dashboard",
+    id: "opex-dashboard",
     title: "SaaS Dashboard Development",
-    client: "TechAnalytics",
+    client: "Neogrant Oy",
     brief:
-      "Created an intuitive analytics dashboard, improving user engagement by 150%.",
-    image: "/images/case-study-saas.jpg",
-    tags: ["SaaS", "Dashboard", "Data Visualization"],
+      "Accounting and financial management genuinely from one place. Increase work enjoyment and stay up to date with tasks All under one application",
+    image: "/images/opex.PNG",
+    tags: ["SaaS", "Dashboard", "React", "TypeScript"],
   },
   {
-    id: "mobile-app",
-    title: "Mobile App for Fitness Tracking",
-    client: "FitLife",
+    id: "web-app",
+    title: "Wep application",
+    client: "Matco",
     brief:
-      "Developed a user-friendly mobile app that helped the startup secure its first round of funding.",
-    image: "/images/case-study-mobile-app.jpg",
-    tags: ["Mobile App", "React Native", "Health Tech"],
+      "Modern Automotive Technology (MATCO) is a modern workshop, and car sales center based in Somaliland.",
+    image: "/images/matco.PNG",
+    tags: ["Web App", "React", "Nextjs", "TypeScript"],
   },
 ];
 

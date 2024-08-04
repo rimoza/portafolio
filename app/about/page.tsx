@@ -37,7 +37,7 @@ const AboutPage = () => {
             <div className="md:flex-shrink-0">
               <Image
                 className="h-64 w-full object-cover md:w-64"
-                src="/images/profile-pic.jpg"
+                src="/images/ridwan.JPG"
                 alt="Ridwan Mohamed"
                 width={256}
                 height={256}
@@ -58,7 +58,7 @@ const AboutPage = () => {
               </p>
               <div className="mt-4 flex space-x-4">
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://linkedin.com/in/ridwan-mohamed-363477161/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
@@ -66,7 +66,7 @@ const AboutPage = () => {
                   <FaLinkedin size={24} />
                 </a>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/rimoza"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
@@ -74,7 +74,7 @@ const AboutPage = () => {
                   <FaGithub size={24} />
                 </a>
                 <a
-                  href="https://twitter.com/yourhandle"
+                  href="https://twitter.com/rimoza_10"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
@@ -91,7 +91,7 @@ const AboutPage = () => {
           <div className="bg-white shadow-lg rounded-lg p-6">
             <p className="text-gray-600 mb-4">
               My passion for web development ignited when I built my first HTML
-              website at 15. Since then, I&apos;ve been on an exciting journey
+              website at 2021. Since then, I&apos;ve been on an exciting journey
               of continuous learning and growth, always staying at the forefront
               of the latest technologies and industry best practices.
             </p>
