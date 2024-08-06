@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   FaEnvelope,
   FaPhone,
@@ -9,6 +11,48 @@ import {
 } from "react-icons/fa";
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitMessage("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setSubmitMessage("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setSubmitMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -45,6 +89,7 @@ const ContactPage = () => {
                   >
                     <FaLinkedin size={24} />
                   </a>
+
                   <a
                     href="https://github.com/rimoza"
                     target="_blank"
@@ -53,6 +98,7 @@ const ContactPage = () => {
                   >
                     <FaGithub size={24} />
                   </a>
+
                   <a
                     href="https://x.com/rimoza_10"
                     target="_blank"
@@ -65,18 +111,20 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="p-8 md:w-2/3">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label
                     htmlFor="name"
                     className="block text-gray-700 font-bold mb-2"
                   >
-                    Name
+                    Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full bg-gray-100 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
                     placeholder="Your Name"
                     required
@@ -87,12 +135,14 @@ const ContactPage = () => {
                     htmlFor="email"
                     className="block text-gray-700 font-bold mb-2"
                   >
-                    Email
+                    Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full bg-gray-100 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
                     placeholder="your@email.com"
                     required
@@ -103,12 +153,14 @@ const ContactPage = () => {
                     htmlFor="subject"
                     className="block text-gray-700 font-bold mb-2"
                   >
-                    Subject
+                    Subject <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full bg-gray-100 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
                     placeholder="Subject"
                     required
@@ -119,11 +171,13 @@ const ContactPage = () => {
                     htmlFor="message"
                     className="block text-gray-700 font-bold mb-2"
                   >
-                    Message
+                    Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4}
                     className="w-full bg-gray-100 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
                     placeholder="Your message"
@@ -133,11 +187,23 @@ const ContactPage = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-dark transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className="bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </div>
+                {submitMessage && (
+                  <p
+                    className={`mt-4 text-center ${
+                      submitMessage.includes("successfully")
+                        ? "text-green-600"
+                        : "text-red-600"
+                    }`}
+                  >
+                    {submitMessage}
+                  </p>
+                )}
               </form>
             </div>
           </div>
