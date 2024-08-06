@@ -54,4 +54,15 @@ export const caseStudies = [
       solution: "We utilized Next.js for server-side rendering and implemented a robust search and filter system for the inventory.",
       results: "The web application has increased online inquiries by 75% and improved the overall user experience, leading to a 30% increase in lead generation.",
     },
+    {
+      id: "my-portfolio",
+      title: "My Portfolio",
+      client: "-",
+      brief: "Every thing about me, my projects and my skills",
+      image: "/images/my-portfolio.PNG",
+      tags: ["Web App", "Next.js", "TypeScript"],
+      challenges: "The main challenge was creating a fast, responsive web application that could handle a large inventory of vehicles and services.",
+      solution: "We utilized Next.js for server-side rendering and implemented a robust search and filter system for the inventory.",
+      results: "The web application has increased online inquiries by 75% and improved the overall user experience, leading to a 30% increase in lead generation.",
+    },
   ];
