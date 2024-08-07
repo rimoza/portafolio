@@ -1,4 +1,5 @@
 import { Alegreya } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import Layout from "../components/Layout/Layout";
 import "./styles/globals.css";
 
@@ -12,7 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={alegreya.className}>
-          <Layout className={alegreya.className}>{children}</Layout>
+        <Layout className={alegreya.className}>
+          {children}
+          <Analytics />
+        </Layout>
       </body>
     </html>
   );
