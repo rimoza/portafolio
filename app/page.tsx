@@ -85,7 +85,7 @@ export default function Home() {
       <div className="relative z-10">
         <header className="py-16 px-4 sm:px-6 lg:px-8 text-center">
           <Image
-            src="/images/avatar.jpg"
+            src="/images/me3.jpg"
             alt="Ridwan Mohamed"
             width={150}
             height={150}

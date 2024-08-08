@@ -37,7 +37,7 @@ const AboutPage = () => {
             <div className="md:flex-shrink-0">
               <Image
                 className="h-64 w-full object-cover md:w-64"
-                src="/images/ridwan.JPG"
+                src="/images/me2.jpg"
                 alt="Ridwan Mohamed"
                 width={256}
                 height={256}
