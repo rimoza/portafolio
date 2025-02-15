@@ -4,14 +4,16 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { FaArrowRight } from "react-icons/fa"
 
+interface Project {
+  slug: string
+  title: string
+  description: string
+  image: string
+  tags: string[]
+}
+
 interface ProjectCardProps {
-  project: {
-    title: string
-    description: string
-    image: string
-    link: string
-    tags: string[]
-  }
+  project: Project
   index: number
 }
 
@@ -27,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <Image src={project.image || "/placeholder.svg"} alt={project.title} layout="fill" objectFit="cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
           <Link
-            href={project.link}
+            href={`/projects/${project.slug}`}
             className="text-white font-semibold py-2 px-4 rounded-full bg-primary hover:bg-primary-light transition-colors duration-300"
           >
             View Project
@@ -45,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           ))}
         </div>
         <Link
-          href={project.link}
+          href={`/projects/${project.slug}`}
           className="text-primary hover:text-primary-light font-medium transition-colors duration-300 flex items-center"
         >
           Learn More

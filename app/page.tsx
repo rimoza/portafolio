@@ -13,24 +13,24 @@ import ContactSection from "../components/contact-section"
 
 const projects = [
   {
+    slug: "afmaal-app",
     title: "Afmaal App",
     description: "A vocabulary builder designed to enhance language learning in English.",
     image: "/images/afmaal.PNG",
-    link: "/case-studies/afmaal",
     tags: ["React Native", "Firebase", "i18n"],
   },
   {
+    slug: "opex-dashboard",
     title: "OPEX Dashboard",
     description: "Financial management dashboard for increased work efficiency.",
     image: "/images/opex.PNG",
-    link: "/case-studies/opex-dashboard",
     tags: ["React", "D3.js", "Node.js"],
   },
   {
+    slug: "matco-web-app",
     title: "MATCO Web Application",
     description: "Modern workshop and car sales center web application.",
     image: "/images/matco.PNG",
-    link: "/case-studies/web-app",
     tags: ["Next.js", "Tailwind CSS", "MongoDB"],
   },
 ]
@@ -86,11 +86,11 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-center text-white mb-8">Featured Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, index) => (
-                  <ProjectCard key={index} project={project} index={index} />
+                  <ProjectCard key={project.slug} project={project} index={index} />
                 ))}
               </div>
               <div className="text-center mt-12">
-                <Link href="/case-studies" className="button-primary group">
+                <Link href="/projects" className="button-primary group">
                   View All Projects
                   <FaArrowRight className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-2" />
                 </Link>
