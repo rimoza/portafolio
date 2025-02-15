@@ -6,8 +6,8 @@ on:
   push:
     branches-ignore:
       - main
-    paths-ignore:
-      - 'sanity-project/**'
+    # paths-ignore:
+      # - 'sanity-project/**'
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
