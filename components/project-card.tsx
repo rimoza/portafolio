@@ -1,8 +1,7 @@
 import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { FaArrowRight } from "react-icons/fa"
+import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa"
 
 interface Project {
   slug: string
@@ -19,42 +18,63 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-    >
-      <div className="relative h-48">
-        <Image src={project.image || "/placeholder.svg"} alt={project.title} layout="fill" objectFit="cover" />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-          <Link
-            href={`/projects/${project.slug}`}
-            className="text-white font-semibold py-2 px-4 rounded-full bg-primary hover:bg-primary-light transition-colors duration-300"
-          >
-            View Project
-          </Link>
+    <div className="group project-card border border-white border-opacity-20 hover:border-opacity-40">
+      <div className="relative h-56 overflow-hidden">
+        <Image 
+          src={project.image || "/placeholder.svg"} 
+          alt={project.title} 
+          fill
+          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex gap-4">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="bg-white text-black font-medium py-2 px-4 hover:bg-gray-200 transition-colors duration-300 flex items-center gap-2"
+            >
+              <FaArrowRight />
+              View Details
+            </Link>
+            <a
+              href="#"
+              className="bg-black text-white font-medium py-2 px-4 hover:bg-gray-800 transition-colors duration-300 flex items-center gap-2"
+            >
+              <FaExternalLinkAlt />
+              Live Demo
+            </a>
+          </div>
         </div>
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-        <p className="text-gray-300 mb-4">{project.description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+      
+      <div className="p-8">
+        <h3 className="text-2xl font-bold mb-4 text-white font-light">
+          {project.title}
+        </h3>
+        <p className="text-gray-400 mb-6 leading-relaxed font-light">
+          {project.description}
+        </p>
+        
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map((tag, i) => (
-            <span key={i} className="text-xs bg-primary text-indigo-900 px-2 py-1 rounded-full">
+            <span 
+              key={i} 
+              className="text-xs border border-white border-opacity-30 text-gray-300 px-3 py-1 font-medium"
+            >
               {tag}
             </span>
           ))}
         </div>
+        
         <Link
           href={`/projects/${project.slug}`}
-          className="text-primary hover:text-primary-light font-medium transition-colors duration-300 flex items-center"
+          className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-300 group border-b border-white border-opacity-0 hover:border-opacity-100 pb-1"
         >
           Learn More
-          <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-2" />
+          <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

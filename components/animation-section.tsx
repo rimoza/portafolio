@@ -1,37 +1,45 @@
 "use client"
 
 import type React from "react"
-import { useEffect, useRef } from "react"
-import { motion, useAnimation, useInView } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
 interface AnimatedSectionProps {
   children: React.ReactNode
 }
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children }) => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-  const mainControls = useAnimation()
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible")
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(entry.target)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
     }
-  }, [isInView, mainControls])
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      variants={{
-        hidden: { opacity: 0, y: 75 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      initial="hidden"
-      animate={mainControls}
-      transition={{ duration: 0.5, delay: 0.25 }}
+      className={`transition-all duration-700 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-8'
+      }`}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
