@@ -88,7 +88,7 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold mb-8 font-light tracking-wide">My Story</h2>
               <div className="space-y-6 text-gray-400 font-light leading-relaxed">
                 <p className="text-lg">
-                  I'm a Full Stack Developer with over 3 years of experience building web and mobile applications. 
+                  I&apos;m a Full Stack Developer with over 3 years of experience building web and mobile applications. 
                   My journey began with a curiosity about how things work on the internet, and it has evolved into 
                   a passion for creating meaningful digital solutions.
                 </p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                   What matters most is understanding user needs and translating them into elegant, functional code.
                 </p>
                 <p className="text-lg">
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, 
+                  When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open source projects, 
                   or mentoring fellow developers in the community.
                 </p>
               </div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto">
               <p className="text-xl text-gray-400 font-light leading-relaxed mb-8">
                 I believe great software comes from understanding people, not just technology. 
-                I'm constantly learning, whether it's a new framework, design principle, or business insight. 
+                I&apos;m constantly learning, whether it&apos;s a new framework, design principle, or business insight. 
                 My goal is to bridge the gap between complex technical solutions and simple, delightful user experiences.
               </p>
               <div className="w-32 h-px bg-white opacity-30 mx-auto mb-8"></div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
         <div className="text-center border-t border-white border-opacity-20 pt-16">
           <h2 className="text-3xl font-bold mb-6 font-light">Let's Work Together</h2>
           <p className="text-xl text-gray-400 mb-8 font-light max-w-2xl mx-auto">
-            I'm always interested in new opportunities and exciting projects. Let's discuss how we can create something amazing together.
+            I&apos;m always interested in new opportunities and exciting projects. Let&apos;s discuss how we can create something amazing together.
           </p>
           <Link 
             href="/#contact" 

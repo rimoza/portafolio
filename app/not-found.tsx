@@ -30,8 +30,8 @@ export default function NotFound() {
         <div className="mb-12">
           <div className="w-24 h-px bg-white opacity-30 mx-auto mb-6"></div>
           <p className='text-xl sm:text-2xl text-gray-400 font-light leading-relaxed'>
-            The page you're looking for seems to have wandered off into the digital void. 
-            Let's get you back to familiar territory.
+            The page you&apos;re looking for seems to have wandered off into the digital void. 
+            Let&apos;s get you back to familiar territory.
           </p>
         </div>
 

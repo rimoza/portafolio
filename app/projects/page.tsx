@@ -176,7 +176,7 @@ export default function ProjectsPage() {
         <div className='mt-24 text-center border-t border-white border-opacity-20 pt-16'>
           <h2 className='text-3xl font-bold mb-6 font-light'>Interested in Working Together?</h2>
           <p className='text-xl text-gray-400 mb-8 font-light max-w-2xl mx-auto'>
-            I'm always open to discussing new opportunities and innovative projects.
+            I&apos;m always open to discussing new opportunities and innovative projects.
           </p>
           <Link 
             href="/#contact" 
