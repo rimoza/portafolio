@@ -247,7 +247,7 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <div className="text-center border-t border-white border-opacity-20 pt-16">
-          <h2 className="text-3xl font-bold mb-6 font-light">Let's Work Together</h2>
+          <h2 className="text-3xl font-bold mb-6 font-light">Let&apos;s Work Together</h2>
           <p className="text-xl text-gray-400 mb-8 font-light max-w-2xl mx-auto">
             I&apos;m always interested in new opportunities and exciting projects. Let&apos;s discuss how we can create something amazing together.
           </p>
