@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCalendar, FaClock, FaUsers, FaCheck } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCalendar, FaClock, FaUsers, FaCheck, FaCode, FaRocket, FaStar, FaEye } from 'react-icons/fa';
 
 // This would typically come from a database or API
 const projects = [
@@ -117,38 +117,47 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
   }
 
   return (
-    <div className='min-h-screen bg-white text-black'>
+    <div className='min-h-screen bg-black text-white'>
       {/* Header */}
-      <header className='border-b border-gray-200 bg-white sticky top-0 z-10'>
-        <div className='max-w-7xl mx-auto px-4 py-8'>
-          <div className="mb-6">
+      <header className='border-b border-gray-700 bg-gradient-to-br from-gray-900/50 to-black/80 backdrop-blur-sm sticky top-0 z-10'>
+        <div className='max-w-7xl mx-auto px-4 py-12'>
+          <div className="mb-8">
             <Link
               href='/projects'
-              className='group inline-flex items-center text-gray-600 hover:text-black transition-all duration-300 border border-gray-300 hover:border-black px-6 py-3'
+              className='group inline-flex items-center text-gray-400 hover:text-white transition-all duration-300 border border-gray-700 hover:border-gray-500 px-6 py-3 rounded-full backdrop-blur-sm bg-gray-800/30'
             >
               <FaArrowLeft className='mr-3 group-hover:-translate-x-1 transition-transform duration-300' />
               <span className="font-medium tracking-wide">BACK TO PROJECTS</span>
             </Link>
           </div>
-          <div className='flex items-center justify-between'>
-            <h1 className='text-4xl font-bold'>{project.title}</h1>
+          
+          <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8'>
+            <div className='space-y-4'>
+              <div className='inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full'>
+                <FaRocket className='text-blue-400 text-sm' />
+                <span className='text-blue-400 text-sm font-medium'>Featured Project</span>
+              </div>
+              <h1 className='text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent'>{project.title}</h1>
+              <p className='text-xl text-gray-400 font-light max-w-2xl'>{project.description}</p>
+            </div>
+            
             <div className='flex space-x-4'>
               <a
                 href={project.githubLink}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center px-6 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-200'
+                className='group inline-flex items-center px-8 py-4 border-2 border-gray-600 text-gray-300 hover:border-white hover:text-white transition-all duration-300 rounded-full transform hover:-translate-y-1'
               >
-                <FaGithub className='mr-2' />
+                <FaGithub className='mr-3 group-hover:scale-110 transition-transform duration-300' />
                 GitHub
               </a>
               <a
                 href={project.liveLink}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all duration-200'
+                className='group inline-flex items-center px-8 py-4 bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-full transform hover:-translate-y-1 font-semibold'
               >
-                <FaExternalLinkAlt className='mr-2' />
+                <FaExternalLinkAlt className='mr-3 group-hover:scale-110 transition-transform duration-300' />
                 Live Demo
               </a>
             </div>
@@ -156,28 +165,32 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
         </div>
       </header>
 
-      <div className='max-w-7xl mx-auto px-4 py-12'>
+      <div className='max-w-7xl mx-auto px-4 py-16'>
         {/* Hero Image */}
-        <div className='mb-16'>
-          <div className='relative overflow-hidden rounded-2xl shadow-2xl'>
+        <div className='mb-20'>
+          <div className='relative overflow-hidden rounded-3xl border border-gray-700 bg-gradient-to-br from-gray-900/50 to-black/80'>
             <Image
               src={project.image || '/placeholder.svg'}
               alt={project.title}
               width={1200}
               height={600}
-              className='w-full h-96 object-cover'
+              className='w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700'
             />
-            <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center'>
-              <div className='text-center text-white'>
-                <p className='text-xl mb-4'>{project.description}</p>
-                <div className='flex items-center justify-center space-x-6 text-sm'>
-                  <div className='flex items-center'>
-                    <FaCalendar className='mr-2' />
-                    {project.timeline}
+            <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent'></div>
+            <div className='absolute inset-0 flex items-end justify-center p-12'>
+              <div className='text-center text-white max-w-4xl'>
+                <div className='flex items-center justify-center space-x-8 mb-6'>
+                  <div className='flex items-center gap-3 px-4 py-2 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm'>
+                    <FaCalendar className='text-blue-400' />
+                    <span className='text-sm font-medium'>{project.timeline}</span>
                   </div>
-                  <div className='flex items-center'>
-                    <FaUsers className='mr-2' />
-                    {project.teamSize}
+                  <div className='flex items-center gap-3 px-4 py-2 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm'>
+                    <FaUsers className='text-green-400' />
+                    <span className='text-sm font-medium'>{project.teamSize}</span>
+                  </div>
+                  <div className='flex items-center gap-3 px-4 py-2 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm'>
+                    <FaStar className='text-yellow-400' />
+                    <span className='text-sm font-medium'>Featured</span>
                   </div>
                 </div>
               </div>
@@ -185,23 +198,36 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
           </div>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-16'>
           {/* Main Content */}
-          <div className='lg:col-span-2 space-y-12'>
+          <div className='lg:col-span-2 space-y-16'>
             {/* Overview */}
             <section>
-              <h2 className='text-3xl font-bold mb-6 border-b border-gray-200 pb-3'>Project Overview</h2>
-              <p className='text-lg leading-relaxed text-gray-700 mb-6'>{project.fullDescription}</p>
+              <div className='mb-8'>
+                <div className='inline-flex items-center gap-3 mb-4'>
+                  <FaEye className='text-blue-400 text-xl' />
+                  <h2 className='text-4xl font-bold text-white'>Project Overview</h2>
+                </div>
+                <div className='w-24 h-px bg-gradient-to-r from-blue-400 to-transparent'></div>
+              </div>
               
-              <div className='bg-gray-50 p-6 rounded-xl'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  <div>
-                    <h3 className='font-semibold text-lg mb-3'>The Problem</h3>
-                    <p className='text-gray-600'>{project.problem}</p>
+              <p className='text-xl leading-relaxed text-gray-300 mb-8 font-light'>{project.fullDescription}</p>
+              
+              <div className='bg-gradient-to-br from-gray-900/50 to-black/80 border border-gray-700 p-8 rounded-2xl backdrop-blur-sm'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                  <div className='space-y-4'>
+                    <div className='flex items-center gap-2 mb-3'>
+                      <div className='w-3 h-3 bg-red-500 rounded-full'></div>
+                      <h3 className='font-semibold text-xl text-white'>The Problem</h3>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed'>{project.problem}</p>
                   </div>
-                  <div>
-                    <h3 className='font-semibold text-lg mb-3'>The Solution</h3>
-                    <p className='text-gray-600'>{project.solution}</p>
+                  <div className='space-y-4'>
+                    <div className='flex items-center gap-2 mb-3'>
+                      <div className='w-3 h-3 bg-green-500 rounded-full'></div>
+                      <h3 className='font-semibold text-xl text-white'>The Solution</h3>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed'>{project.solution}</p>
                   </div>
                 </div>
               </div>
@@ -209,12 +235,21 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
 
             {/* Key Features */}
             <section>
-              <h2 className='text-3xl font-bold mb-6 border-b border-gray-200 pb-3'>Key Features</h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='mb-8'>
+                <div className='inline-flex items-center gap-3 mb-4'>
+                  <FaRocket className='text-green-400 text-xl' />
+                  <h2 className='text-4xl font-bold text-white'>Key Features</h2>
+                </div>
+                <div className='w-24 h-px bg-gradient-to-r from-green-400 to-transparent'></div>
+              </div>
+              
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 {project.features.map((feature, index) => (
-                  <div key={index} className='flex items-start space-x-3 p-4 bg-gray-50 rounded-lg'>
-                    <FaCheck className='text-green-600 mt-1 flex-shrink-0' />
-                    <span className='text-gray-700'>{feature}</span>
+                  <div key={index} className='group flex items-start space-x-4 p-6 bg-gradient-to-br from-gray-900/40 to-black/60 border border-gray-700 rounded-xl hover:border-gray-600 hover:bg-gradient-to-br hover:from-gray-800/50 hover:to-gray-900/70 transition-all duration-300'>
+                    <div className='w-6 h-6 bg-green-500/20 border border-green-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-500/30 transition-colors duration-300'>
+                      <FaCheck className='text-green-400 text-xs' />
+                    </div>
+                    <span className='text-gray-300 font-light leading-relaxed group-hover:text-gray-200 transition-colors duration-300'>{feature}</span>
                   </div>
                 ))}
               </div>
@@ -222,28 +257,43 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
 
             {/* Challenges & Results */}
             <section>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
                 <div>
-                  <h2 className='text-2xl font-bold mb-4'>Challenges</h2>
-                  <ul className='space-y-3'>
+                  <div className='mb-6'>
+                    <div className='inline-flex items-center gap-3 mb-4'>
+                      <div className='w-3 h-3 bg-red-500 rounded-full'></div>
+                      <h2 className='text-3xl font-bold text-white'>Challenges</h2>
+                    </div>
+                    <div className='w-16 h-px bg-gradient-to-r from-red-500 to-transparent'></div>
+                  </div>
+                  
+                  <div className='space-y-4'>
                     {project.challenges.map((challenge, index) => (
-                      <li key={index} className='flex items-start space-x-3'>
+                      <div key={index} className='flex items-start space-x-4 p-4 bg-gradient-to-br from-red-500/5 to-red-500/10 border border-red-500/20 rounded-xl'>
                         <div className='w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0'></div>
-                        <span className='text-gray-700'>{challenge}</span>
-                      </li>
+                        <span className='text-gray-300 font-light leading-relaxed'>{challenge}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
+                
                 <div>
-                  <h2 className='text-2xl font-bold mb-4'>Results</h2>
-                  <ul className='space-y-3'>
+                  <div className='mb-6'>
+                    <div className='inline-flex items-center gap-3 mb-4'>
+                      <div className='w-3 h-3 bg-green-500 rounded-full'></div>
+                      <h2 className='text-3xl font-bold text-white'>Results</h2>
+                    </div>
+                    <div className='w-16 h-px bg-gradient-to-r from-green-500 to-transparent'></div>
+                  </div>
+                  
+                  <div className='space-y-4'>
                     {project.results.map((result, index) => (
-                      <li key={index} className='flex items-start space-x-3'>
+                      <div key={index} className='flex items-start space-x-4 p-4 bg-gradient-to-br from-green-500/5 to-green-500/10 border border-green-500/20 rounded-xl'>
                         <div className='w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0'></div>
-                        <span className='text-gray-700'>{result}</span>
-                      </li>
+                        <span className='text-gray-300 font-light leading-relaxed'>{result}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </div>
             </section>
@@ -253,38 +303,51 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
           <div className='lg:col-span-1'>
             <div className='sticky top-32 space-y-8'>
               {/* Project Info */}
-              <div className='bg-gray-50 p-6 rounded-xl'>
-                <h3 className='text-xl font-bold mb-4'>Project Info</h3>
-                <div className='space-y-4'>
+              <div className='bg-gradient-to-br from-gray-900/50 to-black/80 border border-gray-700 p-8 rounded-2xl backdrop-blur-sm'>
+                <div className='inline-flex items-center gap-3 mb-6'>
+                  <FaCode className='text-blue-400 text-xl' />
+                  <h3 className='text-2xl font-bold text-white'>Project Info</h3>
+                </div>
+                
+                <div className='space-y-6'>
                   <div>
-                    <div className='flex items-center text-sm text-gray-600 mb-1'>
-                      <FaClock className='mr-2' />
-                      Timeline
+                    <div className='flex items-center text-gray-400 mb-2'>
+                      <FaClock className='mr-3 text-blue-400' />
+                      <span className='text-sm font-medium'>Timeline</span>
                     </div>
-                    <div className='font-semibold'>{project.timeline}</div>
+                    <div className='text-white font-semibold text-lg'>{project.timeline}</div>
                   </div>
-                  <div>
-                    <div className='flex items-center text-sm text-gray-600 mb-1'>
-                      <FaUsers className='mr-2' />
-                      Team Size
+                  
+                  <div className='border-t border-gray-700 pt-6'>
+                    <div className='flex items-center text-gray-400 mb-2'>
+                      <FaUsers className='mr-3 text-green-400' />
+                      <span className='text-sm font-medium'>Team Size</span>
                     </div>
-                    <div className='font-semibold'>{project.teamSize}</div>
+                    <div className='text-white font-semibold text-lg'>{project.teamSize}</div>
                   </div>
-                  <div>
-                    <div className='text-sm text-gray-600 mb-1'>My Role</div>
-                    <div className='font-semibold'>{project.myRole}</div>
+                  
+                  <div className='border-t border-gray-700 pt-6'>
+                    <div className='flex items-center text-gray-400 mb-2'>
+                      <FaRocket className='mr-3 text-purple-400' />
+                      <span className='text-sm font-medium'>My Role</span>
+                    </div>
+                    <div className='text-white font-semibold text-lg leading-relaxed'>{project.myRole}</div>
                   </div>
                 </div>
               </div>
 
               {/* Technologies */}
-              <div className='bg-gray-50 p-6 rounded-xl'>
-                <h3 className='text-xl font-bold mb-4'>Technologies Used</h3>
-                <div className='flex flex-wrap gap-2'>
+              <div className='bg-gradient-to-br from-gray-900/50 to-black/80 border border-gray-700 p-8 rounded-2xl backdrop-blur-sm'>
+                <div className='inline-flex items-center gap-3 mb-6'>
+                  <FaCode className='text-green-400 text-xl' />
+                  <h3 className='text-2xl font-bold text-white'>Technologies</h3>
+                </div>
+                
+                <div className='flex flex-wrap gap-3'>
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className='bg-black text-white px-3 py-1 rounded-full text-sm font-medium'
+                      className='px-4 py-2 bg-gray-800/50 border border-gray-700 text-gray-300 rounded-full text-sm font-medium hover:border-gray-600 hover:bg-gray-700/50 hover:text-white transition-all duration-300'
                     >
                       {tech}
                     </span>
@@ -293,23 +356,23 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
               </div>
 
               {/* Actions */}
-              <div className='space-y-3'>
+              <div className='space-y-4'>
                 <a
                   href={project.githubLink}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='w-full flex items-center justify-center px-6 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-200'
+                  className='group w-full flex items-center justify-center px-8 py-4 border-2 border-gray-600 text-gray-300 hover:border-white hover:text-white transition-all duration-300 rounded-full transform hover:-translate-y-1'
                 >
-                  <FaGithub className='mr-2' />
+                  <FaGithub className='mr-3 group-hover:scale-110 transition-transform duration-300' />
                   View Source Code
                 </a>
                 <a
                   href={project.liveLink}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='w-full flex items-center justify-center px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all duration-200'
+                  className='group w-full flex items-center justify-center px-8 py-4 bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-full transform hover:-translate-y-1 font-semibold'
                 >
-                  <FaExternalLinkAlt className='mr-2' />
+                  <FaExternalLinkAlt className='mr-3 group-hover:scale-110 transition-transform duration-300' />
                   View Live Demo
                 </a>
               </div>

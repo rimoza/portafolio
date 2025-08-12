@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaArrowLeft, FaDownload, FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaCode, FaLaptopCode, FaMobile, FaServer, FaPalette } from 'react-icons/fa';
+import { FaArrowLeft, FaDownload, FaGithub, FaLinkedin, FaEnvelope, FaCode, FaLaptopCode, FaMobile, FaServer, FaPalette } from 'react-icons/fa';
 import MonochromeBackground from '../../components/network-background';
 import AnimatedSection from '../../components/animation-section';
 
@@ -219,20 +219,12 @@ export default function AboutPage() {
                   <FaGithub className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/ridwan-mohamed-363477161/"
+                  href="https://www.linkedin.com/in/rimoza"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 border border-white border-opacity-20 text-gray-400 hover:text-white hover:border-white transition-all duration-300"
                 >
                   <FaLinkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://twitter.com/rimoza_10"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-4 border border-white border-opacity-20 text-gray-400 hover:text-white hover:border-white transition-all duration-300"
-                >
-                  <FaTwitter className="w-6 h-6" />
                 </a>
                 <a
                   href="mailto:ridwan.maxamed1@gmail.com"
