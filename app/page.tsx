@@ -219,7 +219,7 @@ export default function Home() {
                 <h4 className="text-lg font-semibold text-white mb-6">Get In Touch</h4>
                 <div className="space-y-4">
                   <p className="text-gray-400 font-light">
-                    Ready to work together? Let's create something amazing.
+                    Ready to work together? Let&apos;s create something amazing.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a href="https://github.com/rimoza" target="_blank" rel="noopener noreferrer" 
