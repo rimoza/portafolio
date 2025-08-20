@@ -18,11 +18,17 @@ jobs:
       - name: Install Yarn v1
         run: npm install -g yarn@1.22.22
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Build project
         run: yarn build
 
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
       - name: Deploy to Vercel
-        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
