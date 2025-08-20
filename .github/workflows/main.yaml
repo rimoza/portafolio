@@ -15,13 +15,8 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Enable Corepack
-        run: |
-          corepack enable
-          corepack prepare yarn@3.6.1 --activate
-
-      - name: Install dependencies
-        run: yarn install
+      - name: Install Yarn v1
+        run: npm install -g yarn@1.22.22
 
       - name: Build project
         run: yarn build
