@@ -47,8 +47,6 @@ const projects = [
       'Improved access to healthcare services in remote areas, increasing patient engagement by 60%',
       'Maintained 99.9% uptime with automatic failover and load balancing on cloud infrastructure',
     ],
-    githubLink: 'https://github.com/yourusername/afmaal-app',
-    liveLink: 'https://afmaal-app.com',
   },
   {
     slug: 'opex-expense-management',
@@ -87,8 +85,6 @@ const projects = [
       'Scaled to support multiple enterprise customers with 500+ users per tenant without performance degradation',
       'Maintained 99.9% uptime on Google Cloud Platform with automatic failover and load balancing',
     ],
-    githubLink: 'https://github.com/yourusername/opex-dashboard',
-    liveLink: 'https://opex-dashboard.com',
   },
   {
     slug: 'ursin-hub',
@@ -126,8 +122,6 @@ const projects = [
       'Enabled real-time visibility into machine maintenance status, reducing downtime by 30%',
       'Maintained 99.9% uptime with automatic failover and load balancing on Google Cloud Platform',
     ],
-    githubLink: 'https://github.com/yourusername/matco-web-app',
-    liveLink: 'https://matco-web-app.com',
   },
 ];
 
@@ -141,7 +135,7 @@ export default function ProjectDetails({ params }: Readonly<{ params: { slug: st
   return (
     <div className='min-h-screen bg-black text-white'>
       {/* Header */}
-      <header className='border-b border-gray-700 bg-gradient-to-br from-gray-900/50 to-black/80 backdrop-blur-sm sticky top-0 z-10'>
+      <header className='border-b border-gray-700 bg-gradient-to-br from-gray-900/50 to-black/80 backdrop-blur-sm'>
         <div className='max-w-7xl mx-auto px-4 py-12'>
           <div className="mb-8">
             <Link
@@ -163,26 +157,6 @@ export default function ProjectDetails({ params }: Readonly<{ params: { slug: st
               <p className='text-xl text-gray-400 font-light max-w-2xl'>{project.description}</p>
             </div>
             
-            <div className='flex space-x-4'>
-              <a
-                href={project.githubLink}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='group inline-flex items-center px-8 py-4 border-2 border-gray-600 text-gray-300 hover:border-white hover:text-white transition-all duration-300 rounded-full transform hover:-translate-y-1'
-              >
-                <FaGithub className='mr-3 group-hover:scale-110 transition-transform duration-300' />
-                GitHub
-              </a>
-              <a
-                href={project.liveLink}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='group inline-flex items-center px-8 py-4 bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-full transform hover:-translate-y-1 font-semibold'
-              >
-                <FaExternalLinkAlt className='mr-3 group-hover:scale-110 transition-transform duration-300' />
-                Live Demo
-              </a>
-            </div>
           </div>
         </div>
       </header>
@@ -323,7 +297,7 @@ export default function ProjectDetails({ params }: Readonly<{ params: { slug: st
 
           {/* Sidebar */}
           <div className='lg:col-span-1'>
-            <div className='sticky top-32 space-y-8'>
+            <div className='sticky top-8 space-y-8'>
               {/* Project Info */}
               <div className='bg-gradient-to-br from-gray-900/50 to-black/80 border border-gray-700 p-8 rounded-2xl backdrop-blur-sm'>
                 <div className='inline-flex items-center gap-3 mb-6'>
@@ -377,27 +351,6 @@ export default function ProjectDetails({ params }: Readonly<{ params: { slug: st
                 </div>
               </div>
 
-              {/* Actions */}
-              <div className='space-y-4'>
-                <a
-                  href={project.githubLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='group w-full flex items-center justify-center px-8 py-4 border-2 border-gray-600 text-gray-300 hover:border-white hover:text-white transition-all duration-300 rounded-full transform hover:-translate-y-1'
-                >
-                  <FaGithub className='mr-3 group-hover:scale-110 transition-transform duration-300' />
-                  View Source Code
-                </a>
-                <a
-                  href={project.liveLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='group w-full flex items-center justify-center px-8 py-4 bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-full transform hover:-translate-y-1 font-semibold'
-                >
-                  <FaExternalLinkAlt className='mr-3 group-hover:scale-110 transition-transform duration-300' />
-                  View Live Demo
-                </a>
-              </div>
             </div>
           </div>
         </div>

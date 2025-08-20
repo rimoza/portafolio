@@ -48,8 +48,6 @@ const projects = [
       'Improved access to healthcare services in remote areas, increasing patient engagement by 60%',
       'Maintained 99.9% uptime with automatic failover and load balancing on cloud infrastructure',
     ],
-    githubLink: 'https://github.com/yourusername/afmaal-app',
-    liveLink: 'https://afmaal-app.com',
   },
   {
     slug: 'opex-expense-management',
@@ -88,8 +86,6 @@ const projects = [
       'Scaled to support multiple enterprise customers with 500+ users per tenant without performance degradation',
       'Maintained 99.9% uptime on Google Cloud Platform with automatic failover and load balancing',
     ],
-    githubLink: 'https://github.com/yourusername/opex-dashboard',
-    liveLink: 'https://opex-dashboard.com',
   },
   {
     slug: 'ursin-hub',
@@ -127,8 +123,6 @@ const projects = [
       'Enabled real-time visibility into machine maintenance status, reducing downtime by 30%',
       'Maintained 99.9% uptime with automatic failover and load balancing on Google Cloud Platform',
     ],
-    githubLink: 'https://github.com/yourusername/matco-web-app',
-    liveLink: 'https://matco-web-app.com',
   },
 ];
 

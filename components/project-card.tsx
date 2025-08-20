@@ -34,22 +34,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         
         {/* Hover Overlay */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/40 backdrop-blur-sm">
-          <div className="flex gap-4">
-            <Link
-              href={`/projects/${project.slug}`}
-              className="bg-white/90 hover:bg-white text-black font-semibold py-3 px-6 rounded-full transform hover:scale-105 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm"
-            >
-              <FaEye className="w-4 h-4" />
-              View Details
-            </Link>
-            <a
-              href="#"
-              className="bg-gray-800/90 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm"
-            >
-              <FaExternalLinkAlt className="w-4 h-4" />
-              Live Demo
-            </a>
-          </div>
+          <Link
+            href={`/projects/${project.slug}`}
+            className="bg-white/90 hover:bg-white text-black font-semibold py-3 px-6 rounded-full transform hover:scale-105 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm"
+          >
+            <FaEye className="w-4 h-4" />
+            View Details
+          </Link>
         </div>
 
         {/* Project Number */}
