@@ -95,37 +95,10 @@ const projects = [
     title: 'UrsinHub ERP Platform',
     description: 'Comprehensive SaaS ERP platform for construction company personnel and operations management',
     fullDescription: 'UrsinHub is a customized enterprise resource planning platform built for Kuormaus Ursin Oy, featuring comprehensive personnel management, machine tracking, work scheduling, and safety compliance tools. The platform includes web portal, mobile app, and backend API services designed specifically for construction industry workflows.',
-    /**
-     * Problem & Solution:
-  - problem: Construction companies need integrated systems to manage personnel, track machine maintenance, schedule     
-   work efficiently, and maintain safety compliance across multiple projects and locations
-  - solution: Full-stack ERP platform with role-based access control, real-time data synchronization, mobile-first       
-  design for field workers, and automated reporting that streamlines operations from personnel onboarding to project     
-   completion
-     */
     problem: 'Construction companies need integrated systems to manage personnel, track machine maintenance, schedule work efficiently, and maintain safety compliance across multiple projects and locations.',
     solution: 'Full-stack ERP platform with role-based access control, real-time data synchronization, mobile-first design for field workers, and automated reporting that streamlines operations from personnel onboarding to project completion.',
     image: '/images/Ursin_Hub_Logo_Colored.svg',
-    /*
-    Technical Stack:
-  - technologies: NestJS, React, TypeScript, PostgreSQL, TypeORM, Redux Toolkit, TanStack Router, Vite, Tailwind
-  CSS, shadcn/ui, React Native, Expo, JWT Authentication, Google Cloud Storage, Swagger, Jest, Playwright, Docker*/
     technologies: ['NestJS', 'React', 'TypeScript', 'PostgreSQL', 'TypeORM', 'Redux Toolkit', 'TanStack Router', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'React Native', 'Expo', 'JWT Authentication', 'Google Cloud Storage', 'Swagger', 'Jest', 'Playwright', 'Docker'],
-    /*
-    Features (provide 5-6 key features):
-  - Personnel Management: Complete employee lifecycle management with competence tracking, department organization,      
-  and custom field support for specialized worker qualifications
-  - Work Schedule Planning: Advanced scheduling system with drag-and-drop interface, PDF export capabilities, and        
-  rotation pattern support for efficient workforce allocation
-  - Machine & Maintenance Tracking: Comprehensive equipment management with maintenance scheduling, history
-  tracking, and preventive maintenance workflows
-  - Mobile Time Tracking: Native mobile app for field workers to clock in/out with location tracking and offline
-  capability for remote job sites
-  - Safety & Compliance: Inspection checklist system, holiday management, and audit trails to ensure regulatory
-  compliance and worker safety
-  - Multi-tenant Architecture: Role-based permissions system supporting different user types from administrators to      
-  field workers with secure data isolation
-    */
     features: [
       'Personnel Management: Complete employee lifecycle management with competence tracking, department organization, and custom field support for specialized worker qualifications',
       'Work Schedule Planning: Advanced scheduling system with drag-and-drop interface, PDF export capabilities, and rotation pattern support for efficient workforce allocation',
@@ -158,7 +131,7 @@ const projects = [
   },
 ];
 
-export default function ProjectDetails({ params }: { params: { slug: string } }) {
+export default function ProjectDetails({ params }: Readonly<{ params: { slug: string } }>) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {

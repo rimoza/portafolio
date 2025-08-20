@@ -8,7 +8,7 @@ interface Project {
   title: string
   description: string
   image: string
-  tags: string[]
+  // tags: string[]
 }
 
 interface ProjectCardProps {
@@ -73,14 +73,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-8">
-          {project.tags.map((tag, i) => (
+          {/* {project.tags.map((tag, i) => (
             <span 
               key={i} 
               className="text-xs bg-gray-800/50 border border-gray-700 text-gray-300 px-3 py-1.5 rounded-full font-medium group-hover:border-gray-600 group-hover:bg-gray-700/50 transition-all duration-300"
             >
               {tag}
             </span>
-          ))}
+          ))} */}
         </div>
         
         {/* Action Button */}
